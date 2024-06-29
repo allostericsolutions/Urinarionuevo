@@ -4,9 +4,10 @@ from fpdf import FPDF
 import requests
 import tempfile
 import os
+from io import BytesIO 
 
 # Encabezado con Logo y Links
-LOGO_URL = "https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png"  
+LOGO_URL = "https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png" 
 WEBSITE_URL = "https://www.allostericsolutions.com"
 CONTACT_EMAIL = "franciscocuriel@allostericsolutions.com"
 
@@ -14,30 +15,34 @@ CONTACT_EMAIL = "franciscocuriel@allostericsolutions.com"
 def generate_pdf(responses, logo_data):  
     pdf = FPDF()
     pdf.add_page()
-    pdf.set_font("Arial", size=12) 
+    pdf.set_font("Arial", size=12)  
 
     # Add logo 
     if logo_data:
-        pdf.image(logo_data, x=10, y=8, w=25)  
+        try:
+            pdf.image(logo_data, x=10, y=8, w=25)
+        except Exception as e:
+            print(f"Error adding image to PDF: {e}")
 
     # Add title and contact info
+    pdf.set_y(30)  
     pdf.cell(200, 10, txt="Allosteric Solutions", ln=True, align="C")
     pdf.cell(200, 10, txt=f"Visit our website: {WEBSITE_URL}", ln=True, align="C")
     pdf.cell(200, 10, txt=f"Contact: {CONTACT_EMAIL}", ln=True, align="C")
-    pdf.ln(20)  
+    pdf.ln(20) 
 
     # Add responses
     for i, (question, response) in enumerate(responses.items(), 1):
         pdf.cell(200, 10, txt=f"{i}. {question}", ln=True)
         pdf.cell(200, 10, txt=f"   - Correct Answer: {response['answer']}", ln=True)
         pdf.multi_cell(0, 10, txt=f"   - Explanation: {response['explanation']}", align="L")
-        pdf.ln(5) 
+        pdf.ln(5)  
 
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmpfile:
         pdf.output(tmpfile.name)
     return tmpfile.name
 
-# Questions and answers explanation
+# Questions and answers explanation 
 questions_and_answers = {
     "Length of the adult kidney": {
         "options": ["7-10 cm", "9-12 cm", "11-14 cm", "13-16 cm"],
@@ -95,7 +100,6 @@ questions_and_answers = {
         "explanation": "In neonates, the AP dimension of the kidneys typically ranges from 1.5-2.5 cm. AP dimensions above 2.5 cm may suggest obstructive uropathy or congenital nephromegaly, while smaller dimensions can indicate dysplasia or underdevelopment (ARDMS Pediatric Ultrasound Guidelines)."
     }
 }
-
 
 NUM_QUESTIONS = 8  
 
