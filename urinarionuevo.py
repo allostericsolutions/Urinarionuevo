@@ -4,7 +4,7 @@ import streamlit as st
 # Corporate branding
 st.markdown(
     """<div style="text-align: center;">
-    <img src="https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png" style="width:50%; max-width:400px;">
+    <img src="https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png" style="width:50%; max-width:200px;">
     </div>""",
     unsafe_allow_html=True
 )
@@ -77,40 +77,40 @@ def create_question(question, options, correct_answer):
     options = ["Select an option"] + options
     selected_option = st.selectbox("Select an option", options, key=f"selectbox_{st.session_state.current_question}")
     
-    if st.button("Submit", key=f"button_{st.session_state.current_question}"):
-        if selected_option != "Select an option":
+    if selected_option != "Select an option":
+        if st.button("Submit", key=f"button_{st.session_state.current_question}"):
             if selected_option == correct_answer:
-                st.success("Correct")
+                st.success("Correct!")
                 st.session_state.correct_answers += 1
             else:
-                st.error("Incorrect")
+                st.error("Incorrect.")
                 st.session_state.incorrect_questions.append((question, options, correct_answer))
-                
+            
             st.session_state.answered_questions.append((question, options, correct_answer))
             st.session_state.current_question += 1
             st.experimental_rerun()  # Force a rerun to show the next question
-        else:
-          st.warning("Please select an option.")
+    else:
+        st.warning("You need to select an option to submit.")
 
 # Display the current question
 if st.session_state.current_question < len(question_list):
     question, q_data = question_list[st.session_state.current_question]
     create_question(question, q_data["options"], q_data["answer"])
 else:
-    st.write("Quiz Completed")
+    st.write("### Quiz Completed!")
     
     # Show grade
     total_questions = len(questions_and_answers)
     percentage = (st.session_state.correct_answers / total_questions) * 100
     
-    st.markdown(f"### Your final grade is: {st.session_state.correct_answers}/{total_questions} ({percentage:.1f}%)")
+    st.markdown(f"### Your final grade: {st.session_state.correct_answers}/{total_questions} ({percentage:.1f}%)")
     
     if percentage <= 50:
         st.write("You need more practice. Keep going!")
     elif percentage <= 70:
         st.write("Good effort, but there's room for improvement.")
     elif percentage <= 85:
-        st.write("Well done, but you can do better.")
+        st.write("Well done!")
     elif percentage <= 90:
         st.write("Very good!")
     else:
@@ -118,8 +118,8 @@ else:
     
     # Option to retry incorrect questions
     if st.button("Retry Incorrect Questions") and st.session_state.incorrect_questions:
-        question_list = st.session_state.incorrect_questions.copy()
-        random.shuffle(question_list)
+        st.session_state.question_list = st.session_state.incorrect_questions.copy()
+        random.shuffle(st.session_state.question_list)
         st.session_state.incorrect_questions.clear()
         st.session_state.correct_answers = 0
         st.session_state.current_question = 0
