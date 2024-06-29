@@ -3,11 +3,11 @@ import streamlit as st
 st.title("Ultrasound Exam")
 
 # Mostrar logo, contacto y sitio web antes de las pestañas
-st.image("https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png", width=400) 
+st.image("https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png", width=400)
 st.write("Contacto:", "www.allostericsolutions.com")
 st.write("Sitio web:", "franciscocuriel@allostericsolutions.com")
 
-st.write("### ARDMS for Abdominal Ultrasound") 
+st.write("### ARDMS for Abdominal Ultrasound")
 
 # Opciones de subtema
 subtema = st.selectbox("Select a Subtopic:", [
@@ -27,7 +27,7 @@ subtema = st.selectbox("Select a Subtopic:", [
     "The Musculoskeletal Imaging, Breast, and Superficial Structures"
 ])
 
-# Mostrar el contenido del subtema 
+# Mostrar el contenido del subtema
 if subtema == "Abdominal Sonography Overview":
     st.write("#### Abdominal Sonography Overview")
     # Agrega aquí el contenido de "Abdominal Sonography Overview"
@@ -56,6 +56,16 @@ elif subtema == "The Urinary Tract":
     st.write("#### The Urinary Tract")
     # Agrega aquí el contenido de "The Urinary Tract"
     # (textos, imágenes, videos, etc.)
+
+    # Pestaña de eponimos
+    subtema_eponimos = st.selectbox("Select a Subtopic:", ["Eponyms"])
+
+    if subtema_eponimos == "Eponyms":
+        st.write("##### Eponyms related to Urinary Tract Conditions:")
+        st.write("**Henoch-Schönlein purpura:**  Is an inflammatory disorder that affects small blood vessels, causing a purple rash on the skin, abdominal and joint pain, and can also affect the kidneys.")
+        st.write("**Nutcracker syndrome:**  Is a condition caused by compression of the left renal vein between the aorta and the superior mesenteric artery, which can lead to problems with renal blood flow.")
+        st.write("**Wilms tumor (nephroblastoma):**  Is a type of kidney cancer that primarily affects children. It can be referred to as nephroblastoma and can be life-threatening if left untreated.")
+
 elif subtema == "The Adrenal Glands":
     st.write("#### The Adrenal Glands")
     # Agrega aquí el contenido de "The Adrenal Glands"
@@ -90,4 +100,4 @@ st.write("## Evaluation Mode")
 st.write("This section will test your knowledge about ultrasound measurements.")
 
 # Ejecuta el módulo de evaluación
-st.run_the_script(path="evaluacion.py") 
+st.run_the_script(path="evaluacion.py")
