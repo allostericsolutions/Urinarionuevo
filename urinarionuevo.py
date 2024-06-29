@@ -2,7 +2,7 @@ import random
 import streamlit as st
 
 # Corporate branding
-st.markdown(import random
+st.markdown(import random)
 import streamlit as st
 
 # Corporate branding
