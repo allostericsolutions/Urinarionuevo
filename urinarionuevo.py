@@ -63,21 +63,16 @@ NUM_QUESTIONS = 8
 
 # Initialize session state
 def initialize_state():
-    # Inicializa todas las variables de session state
     st.session_state.correct_answers = 0
     st.session_state.answered_questions = []
     st.session_state.current_question = 0
     st.session_state.incorrect_questions = []
     st.session_state.question_list = random.sample(list(questions_and_answers.items()), NUM_QUESTIONS)
 
-# Asegura que el estado se inicialice al cargar la aplicación
 if 'question_list' not in st.session_state:
     initialize_state()
 
 def create_question(question, options, correct_answer):
-    """
-    Creates a single question with options and checks the user's response.
-    """
     st.write(f"**{question}**")
 
     options = ["Select an option"] + options
@@ -90,9 +85,9 @@ def create_question(question, options, correct_answer):
                 st.session_state.correct_answers += 1
             else:
                 st.error("Incorrect.")
-                st.session_state.incorrect_questions.append((question, options[1:], correct_answer))  # Append excluding the "Select an option" entry
+                st.session_state.incorrect_questions.append((question, options[1:], correct_answer))  # Exclude the "Select an option" entry
 
-            st.session_state.answered_questions.append((question, options, correct_answer))
+            st.session_state.answered_questions.append((question, options[1:], correct_answer))  # Store the valid options
             st.session_state.current_question += 1
             st.experimental_rerun()  # Force a rerun to show the next question
         else:
@@ -101,16 +96,16 @@ def create_question(question, options, correct_answer):
 # Display the current question
 if st.session_state.current_question < NUM_QUESTIONS:
     question, q_data = st.session_state.question_list[st.session_state.current_question]
-    create_question(question, q_data["options"], q_data["answer"])
+    create_question(question, q_data[0]["options"], q_data[1]["answer"])
 else:
     st.write("### Quiz Completed!")
-    
+
     # Show grade
     total_questions = NUM_QUESTIONS
     percentage = (st.session_state.correct_answers / total_questions) * 100
-    
+
     st.markdown(f"### Your final grade: {st.session_state.correct_answers}/{total_questions} ({percentage:.1f}%)")
-    
+
     if percentage <= 50:
         st.write("You need more practice. Keep going!")
     elif percentage <= 70:
@@ -121,20 +116,17 @@ else:
         st.write("Very good!")
     else:
         st.write("Excellent!")
-    
+
     # Option to retry incorrect questions
-    if st.button("Retry Incorrect Questions"):
-        if st.session_state.incorrect_questions:
-            st.session_state.question_list = st.session_state.incorrect_questions.copy()
-            random.shuffle(st.session_state.question_list)
-            st.session_state.incorrect_questions.clear()
-            st.session_state.correct_answers = 0
-            st.session_state.current_question = 0
-            st.session_state.answered_questions.clear()
-            st.experimental_rerun()
-        else:
-            st.warning("No incorrect questions to retry.")
-    
+    if st.button("Retry Incorrect Questions") and st.session_state.incorrect_questions:
+        st.session_state.question_list = st.session_state.incorrect_questions.copy()
+        random.shuffle(st.session_state.question_list)
+        st.session_state.incorrect_questions = []
+        st.session_state.correct_answers = 0
+        st.session_state.current_question = 0
+        st.session_state.answered_questions = []
+        st.experimental_rerun()
+
     if st.button("Start a New Quiz"):
         initialize_state()
         st.experimental_rerun()
