@@ -2,18 +2,12 @@ import streamlit as st
 
 st.title("Ultrasound Exam")
 
-# Ancho de la imagen por defecto
-imagen_ancho = 400
-
 # Mostrar logo, contacto y sitio web antes de las pestañas
-st.image("https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png", width=imagen_ancho) 
+st.image("https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png", width=400) 
 st.write("Contacto:", "www.allostericsolutions.com")
 st.write("Sitio web:", "franciscocuriel@allostericsolutions.com")
 
 st.write("### ARDMS for Abdominal Ultrasound") 
-
-# Control para modificar el ancho de la imagen
-imagen_ancho = st.slider("Ajusta el ancho de la imagen", min_value=100, max_value=800, value=imagen_ancho, step=10)
 
 # Opciones de subtema
 subtema = st.selectbox("Select a Subtopic:", [
