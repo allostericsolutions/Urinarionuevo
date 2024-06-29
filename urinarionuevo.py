@@ -48,7 +48,9 @@ questions_and_answers = {
     # Add other questions here ...
 }
 
-# Inicialización de estados
+NUM_QUESTIONS = 8
+
+# Initialize session state
 def initialize_state():
     st.session_state.correct_answers = 0
     st.session_state.answered_questions = []
@@ -59,7 +61,7 @@ def initialize_state():
 if 'question_list' not in st.session_state:
     initialize_state()
 
-# Crear Pregunta
+# Create Question function
 def create_question(question, options, correct_answer):
     st.write(f"**{question}**")
     options = ["Select an option"] + options
@@ -80,14 +82,14 @@ def create_question(question, options, correct_answer):
         else:
             st.warning("You need to select an option to submit.")
 
-# Mostrar pregunta actual
+# Display the current question
 if st.session_state.current_question < len(st.session_state.question_list):
     question, q_data = st.session_state.question_list[st.session_state.current_question]
     create_question(question, q_data["options"], q_data["answer"])
 else:
     st.write("### Quiz Completed!")
     
-    # Calcular y mostrar calificación
+    # Calculate and display the score
     total_questions = len(st.session_state.question_list)
     percentage = (st.session_state.correct_answers / total_questions) * 100
 
@@ -104,7 +106,7 @@ else:
     else:
         st.write("Excellent!")
 
-    # Función para descargar el PDF con respuestas y explicaciones
+    # Function to download the PDF with answers and explanations
     if st.button("Download PDF with Explanations"):
         responses = {q[0]: questions_and_answers[q[0]] for q in st.session_state.answered_questions}
         pdf = generate_pdf(responses)
@@ -114,7 +116,7 @@ else:
                            file_name="ultrasound_explanations.pdf",
                            mime='application/pdf')
 
-    # Opción para reintentar preguntas incorrectas
+    # Option to retry incorrect questions
     if st.button("Retry Incorrect Questions") and st.session_state.incorrect_questions:
         st.session_state.question_list = st.session_state.incorrect_questions.copy()
         random.shuffle(st.session_state.question_list)
