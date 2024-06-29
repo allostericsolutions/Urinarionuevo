@@ -62,14 +62,48 @@ else:
 
 # Create Question function
 def create_question(question, options, correct_answer):
-    # ... (Your question display code)
+    st.write(f"**{question}**")
+    options = ["Select an option"] + options
+    selected_option = st.selectbox("Select an option", options, key=f"selectbox_{st.session_state.current_question}")
+
+    if st.button("Submit", key=f"button_{st.session_state.current_question}"):
+        if selected_option != "Select an option":
+            if selected_option == correct_answer:
+                st.success("Correct!")
+                st.session_state.correct_answers += 1
+            else:
+                st.error("Incorrect.")
+                st.session_state.incorrect_questions.append((question, {"options": options[1:], "answer": correct_answer}))  # Exclude "Select an option"
+
+            st.session_state.answered_questions.append((question, {"options": options[1:], "answer": correct_answer}))
+            st.session_state.current_question += 1
+            st.experimental_rerun()  # Force a rerun to show the next question
+        else:
+            st.warning("You need to select an option to submit.")
 
 # Display the current question
 if st.session_state.current_question < len(st.session_state.question_list):
     question, q_data = st.session_state.question_list[st.session_state.current_question]
     create_question(question, q_data["options"], q_data["answer"])
 else:
-    # ... (Your quiz completion code)
+    st.write("### Quiz Completed!")
+    
+    # Calculate and display the score
+    total_questions = len(st.session_state.question_list)
+    percentage = (st.session_state.correct_answers / total_questions) * 100
+
+    st.markdown(f"### Your final grade: {st.session_state.correct_answers}/{total_questions} ({percentage:.1f}%)")
+
+    if percentage <= 50:
+        st.write("You need more practice. Keep going!")
+    elif percentage <= 70:
+        st.write("Good effort, but there's room for improvement.")
+    elif percentage <= 85:
+        st.write("Well done!")
+    elif percentage <= 90:
+        st.write("Very good!")
+    else:
+        st.write("Excellent!")
 
     # Function to download the PDF with answers and explanations
     if st.button("Download PDF with Explanations"):
@@ -86,4 +120,16 @@ else:
                            file_name="ultrasound_explanations.pdf",
                            mime='application/pdf')
 
-    # ... (Your retry and new quiz buttons)
+    # Option to retry incorrect questions
+    if st.button("Retry Incorrect Questions") and st.session_state.incorrect_questions:
+        st.session_state.question_list = st.session_state.incorrect_questions.copy()
+        random.shuffle(st.session_state.question_list)
+        st.session_state.incorrect_questions.clear()
+        st.session_state.correct_answers = 0
+        st.session_state.current_question = 0
+        st.session_state.answered_questions.clear()
+        st.experimental_rerun()
+
+    if st.button("Start a New Quiz"):
+        initialize_state()
+        st.experimental_rerun()
