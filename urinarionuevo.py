@@ -45,7 +45,51 @@ questions_and_answers = {
         "answer": "4-6 cm",
         "explanation": "The width of an adult kidney, typically falling between 4-6 cm as seen on ultrasound, is essential for gauging the organ’s health. Ensuring a normal width helps confirm that the kidney has adequate filtration capacity and no signs of swelling or shrinkage (ARDMS guidelines)."
     },
-    # Add other questions here ...
+    "Length of the neonatal kidney": {
+        "options": ["1.5-2.5 cm", "2-3 cm", "3.5-5.0 cm", "4-6 cm"],
+        "answer": "3.5-5.0 cm",
+        "explanation": "In newborns, the kidneys should measure between 3.5-5.0 cm. A kidney length below 3.5 cm could indicate hypoplasia, while lengths over 5.0 cm might suggest nephromegaly, possibly due to urinary obstruction or other congenital anomalies (ARDMS Reference for Pediatric Sonography)."
+    },
+    "Width of the neonatal kidney": {
+        "options": ["1-2 cm", "2-3 cm", "3-4 cm", "4-5 cm"],
+        "answer": "2-3 cm",
+        "explanation": "The width of neonatal kidneys is typically between 2-3 cm, a normal range observed through ultrasound imaging. This dimension confirms that the newborn’s kidneys are developing correctly without signs of congenital abnormalities (Guidelines for Ultrasound Examination in Pediatrics, ARDMS)."
+    },
+    "Length of the ureters": {
+        "options": ["10-15 cm", "15-20 cm", "20-25 cm", "28-34 cm"],
+        "answer": "28-34 cm",
+        "explanation": "Normal ureter length in adults is between 28-34 cm. Ureters longer than 34 cm may indicate pathological dilation or elongation due to chronic obstruction or vesicoureteral reflux. Conversely, shorter ureters may be due to congenital abnormalities (ARDMS Abdominal Sonography guidelines)."
+    },
+    "Diameter of the ureters": {
+        "options": ["2 mm", "4 mm", "6 mm", "8 mm"],
+        "answer": "6 mm",
+        "explanation": "Normal ureter diameter is about 6 mm. A diameter exceeding 6 mm on ultrasound is often indicative of hydroureter, which can be due to obstructive uropathy or vesicoureteral reflux. Persistent dilatation might necessitate further investigation for urologic obstruction (ARDMS criteria)."
+    },
+    "Thickness of the bladder wall": {
+        "options": ["1-3 mm", "3-6 mm", "6-9 mm", "9-12 mm"],
+        "answer": "3-6 mm",
+        "explanation": "A normal bladder wall thickness ranges from 3-6 mm. Thicker walls can indicate chronic bladder outlet obstruction, resulting from conditions like benign prostatic hyperplasia or neurogenic bladder. Conversely, a thin bladder wall could imply overdistention or neuropathic bladder disorders (ARDMS Urological Recommendations)."
+    },
+    "Length of the female urethra": {
+        "options": ["2 cm", "4 cm", "6 cm", "8 cm"],
+        "answer": "4 cm",
+        "explanation": "The normal length of the female urethra is approximately 4 cm. A shorter length could predispose to frequent urinary tract infections (UTIs), while an elongated urethra might be seen in cases of urethral diverticulum or other anatomical variations (ARDMS Pelvic Ultrasound Guidelines)."
+    },
+    "Length of the male urethra": {
+        "options": ["10 cm", "15 cm", "20 cm", "25 cm"],
+        "answer": "20 cm",
+        "explanation": "The male urethra typically measures 20 cm in length. Shorter lengths could be indicative of congenital abnormalities or traumatic stricture, whereas longer lengths without corresponding anatomical evidence might suggest false passage or instrumentation trauma (ARDMS Urological Imaging Standards)."
+    },
+    "AP dimension of the adult kidney": {
+        "options": ["1.5-2.5 cm", "2-3 cm", "2.5-4.0 cm", "3-4 cm"],
+        "answer": "2.5-4.0 cm",
+        "explanation": "The anteroposterior dimension of the adult kidney on ultrasound is 2.5-4.0 cm. An increased AP dimension can signal kidney swelling due to acute pyelonephritis or obstruction, while decreased dimensions might indicate chronic atrophy (ARDMS Renal Ultrasound Curriculum)."
+    },
+    "AP dimension of the neonatal kidney": {
+        "options": ["0.5-1.5 cm", "1-2 cm", "1.5-2.5 cm", "2-3 cm"],
+        "answer": "1.5-2.5 cm",
+        "explanation": "In neonates, the AP dimension of the kidneys typically ranges from 1.5-2.5 cm. AP dimensions above 2.5 cm may suggest obstructive uropathy or congenital nephromegaly, while smaller dimensions can indicate dysplasia or underdevelopment (ARDMS Pediatric Ultrasound Guidelines)."
+    }
 }
 
 NUM_QUESTIONS = 8
@@ -63,9 +107,10 @@ def initialize_state():
 
 if 'question_list' not in st.session_state:
     initialize_state()
-elif len(st.session_state.question_list) != NUM_QUESTIONS and not st.session_state.incorrect_questions:
-    # Solo resetear si no están tratando de reintentar las incorrectas
-    initialize_state()
+else:
+    if len(st.session_state.question_list) < NUM_QUESTIONS and not st.session_state.incorrect_questions:
+        # Solo resetear si no están tratando de reintentar las incorrectas
+        initialize_state()
 
 # Create Question function
 def create_question(question, options, correct_answer):
