@@ -2,38 +2,40 @@ import random
 import streamlit as st
 from fpdf import FPDF
 import requests
+import tempfile
+import os
 
 # Encabezado con Logo y Links
-LOGO_URL = "https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png"
+LOGO_URL = "https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png"  
 WEBSITE_URL = "https://www.allostericsolutions.com"
 CONTACT_EMAIL = "franciscocuriel@allostericsolutions.com"
 
 # Generate PDF
-def generate_pdf(responses, logo_data):  # Pass image data
+def generate_pdf(responses, logo_data):  
     pdf = FPDF()
     pdf.add_page()
-    # Use UTF-8 encoding for the font (check fpdf documentation for details)
-    pdf.set_font("Arial", size=12, encoding='utf-8') 
+    pdf.set_font("Arial", size=12) 
 
-    # Add logo
-    pdf.image(logo_data, x=10, y=8, w=25)  # Use image data here
+    # Add logo 
+    if logo_data:
+        pdf.image(logo_data, x=10, y=8, w=25)  
 
-    # Add title
+    # Add title and contact info
     pdf.cell(200, 10, txt="Allosteric Solutions", ln=True, align="C")
     pdf.cell(200, 10, txt=f"Visit our website: {WEBSITE_URL}", ln=True, align="C")
     pdf.cell(200, 10, txt=f"Contact: {CONTACT_EMAIL}", ln=True, align="C")
-    
-    # Add a space
-    pdf.ln(20)
-    
+    pdf.ln(20)  
+
     # Add responses
     for i, (question, response) in enumerate(responses.items(), 1):
         pdf.cell(200, 10, txt=f"{i}. {question}", ln=True)
         pdf.cell(200, 10, txt=f"   - Correct Answer: {response['answer']}", ln=True)
         pdf.multi_cell(0, 10, txt=f"   - Explanation: {response['explanation']}", align="L")
-        pdf.ln(5)
-    
-    return pdf
+        pdf.ln(5) 
+
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmpfile:
+        pdf.output(tmpfile.name)
+    return tmpfile.name
 
 # Questions and answers explanation
 questions_and_answers = {
@@ -94,11 +96,12 @@ questions_and_answers = {
     }
 }
 
-NUM_QUESTIONS = 8  # Set this to the maximum number of questions you want to use
+
+NUM_QUESTIONS = 8  
 
 # Initialize session state
 def initialize_state():
-    if len(questions_and_answers) >= NUM_QUESTIONS:  # Check if enough questions
+    if len(questions_and_answers) >= NUM_QUESTIONS: 
         st.session_state.correct_answers = 0
         st.session_state.answered_questions = []
         st.session_state.current_question = 0
@@ -111,7 +114,6 @@ if 'question_list' not in st.session_state:
     initialize_state()
 else:
     if len(st.session_state.question_list) < NUM_QUESTIONS and not st.session_state.incorrect_questions:
-        # Solo resetear si no están tratando de reintentar las incorrectas
         initialize_state()
 
 # Create Question function
@@ -127,11 +129,11 @@ def create_question(question, options, correct_answer):
                 st.session_state.correct_answers += 1
             else:
                 st.error("Incorrect.")
-                st.session_state.incorrect_questions.append((question, {"options": options[1:], "answer": correct_answer}))  # Exclude "Select an option"
+                st.session_state.incorrect_questions.append((question, {"options": options[1:], "answer": correct_answer})) 
 
             st.session_state.answered_questions.append((question, {"options": options[1:], "answer": correct_answer}))
             st.session_state.current_question += 1
-            st.experimental_rerun()  # Force a rerun to show the next question
+            st.experimental_rerun()  
         else:
             st.warning("You need to select an option to submit.")
 
@@ -142,7 +144,6 @@ if st.session_state.current_question < len(st.session_state.question_list):
 else:
     st.write("### Quiz Completed!")
     
-    # Calculate and display the score
     total_questions = len(st.session_state.question_list)
     percentage = (st.session_state.correct_answers / total_questions) * 100
 
@@ -159,22 +160,29 @@ else:
     else:
         st.write("Excellent!")
 
-    # Function to download the PDF with answers and explanations
     if st.button("Download PDF with Explanations"):
         responses = {q[0]: questions_and_answers[q[0]] for q in st.session_state.answered_questions}
 
-        # Download logo image
-        response = requests.get(LOGO_URL)
-        logo_data = response.content
+        try:
+            response = requests.get(LOGO_URL)
+            response.raise_for_status() 
+            logo_data = BytesIO(response.content)
+        except requests.exceptions.RequestException as e:
+            st.error(f"Error loading logo: {e}")
+            logo_data = None  
 
-        pdf = generate_pdf(responses, logo_data)  # Pass image data
-        pdf_output = pdf.output(dest='S').encode('utf-8') 
-        st.download_button(label="Download PDF",
-                           data=pdf_output,
-                           file_name="ultrasound_explanations.pdf",
-                           mime='application/pdf')
+        pdf_file_path = generate_pdf(responses, logo_data)
 
-    # Option to retry incorrect questions
+        with open(pdf_file_path, "rb") as pdf_file:
+            st.download_button(
+                label="Download PDF",
+                data=pdf_file,
+                file_name="ultrasound_explanations.pdf",
+                mime='application/pdf'
+            )
+
+        os.remove(pdf_file_path)
+
     if st.button("Retry Incorrect Questions") and st.session_state.incorrect_questions:
         st.session_state.question_list = st.session_state.incorrect_questions.copy()
         random.shuffle(st.session_state.question_list)
