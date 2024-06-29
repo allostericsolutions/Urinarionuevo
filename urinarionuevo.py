@@ -89,7 +89,7 @@ questions_and_answers = {
     # Add other questions here ...
 }
 
-NUM_QUESTIONS = 8
+NUM_QUESTIONS = 6
 
 def initialize_state():
     if 'question_list' not in st.session_state or len(st.session_state.question_list) < NUM_QUESTIONS:
