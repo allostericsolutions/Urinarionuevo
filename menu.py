@@ -13,7 +13,7 @@ tab1, tab2 = st.tabs(["Learning", "Evaluation"])
 
 with tab1:
     st.write("## Learning Mode")
-    st.write("This section will provide you with information and examples about ultrasound measurements.")
+  
 
     # Selecciona el subtema
     subtema = st.selectbox("Select a Subtopic:", [
