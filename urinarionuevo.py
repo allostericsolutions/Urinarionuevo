@@ -1,7 +1,12 @@
 import random
 import streamlit as st
 
-# Preguntas y respuestas
+# Corporate branding
+st.image("https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png", use_column_width=True)
+st.markdown("[Visit our website](https://www.allostericsolutions.com)")
+st.markdown("Contact: [franciscocuriel@allostericsolutions.com](mailto:franciscocuriel@allostericsolutions.com)")
+
+# Questions and answers
 questions_and_answers = {
     "Length of the adult kidney": {
         "options": ["7-10 cm", "9-12 cm", "11-14 cm", "13-16 cm"],
@@ -49,61 +54,66 @@ questions_and_answers = {
     }
 }
 
-# Mezcla las preguntas
+# Shuffle the questions
 question_list = list(questions_and_answers.items())
 random.shuffle(question_list)
 
-# Estado inicial en session state
+# Initialize session state
 if 'correct_answers' not in st.session_state:
     st.session_state.correct_answers = 0
 if 'answered_questions' not in st.session_state:
     st.session_state.answered_questions = []
-if 'incorrect_questions' not in st.session_state:
-    st.session_state.incorrect_questions = []
-
+if 'current_question' not in st.session_state:
+    st.session_state.current_question = 0  # Start with the first question
+    
 def create_question(question, options, correct_answer):
     st.write(f"**{question}**")
-    selected_option = st.radio("Seleccione una opción:", options, key=question)
+    
+    selected_option = st.radio("", options, key=question, index=-1)  # Do not preselect any option
+    
+    if st.button("Submit", key=f"button_{question}"):
+        if selected_option:
+            if selected_option == correct_answer:
+                st.success("Correct")
+                st.session_state.correct_answers += 1
+            else:
+                st.error("Incorrect")
+                st.session_state.incorrect_questions.append((question, options, correct_answer))
+            
+            st.session_state.answered_questions.append((question, options, correct_answer))
+            st.session_state.current_question += 1
+            st.experimental_rerun()  # Force a rerun to show the next question
 
-    if st.button(f"Responder {question}", key=f"button_{question}"):
-        if selected_option == correct_answer:
-            st.success("Correcto")
-            st.session_state.correct_answers += 1
-        else:
-            st.error("Incorrecto")
-            st.session_state.incorrect_questions.append((question, options, correct_answer))
-        
-        st.session_state.answered_questions.append((question, options, correct_answer))
-        st.experimental_rerun()  # Forzar un rerun para bloquear la pregunta respondida
+# Display the current question
+if st.session_state.current_question < len(question_list):
+    question, q_data = question_list[st.session_state.current_question]
+    create_question(question, q_data["options"], q_data["answer"])
+else:
+    st.write("Quiz Completed")
 
-# Poblamos la interfaz con preguntas
-for question, q_data in question_list:
-    if question not in [q[0] for q in st.session_state.answered_questions]:
-        create_question(question, q_data["options"], q_data["answer"])
-
-# Botón para mostrar la calificación
-if st.button("Mostrar Calificación"):
+    # Show grade
     total_questions = len(questions_and_answers)
     percentage = (st.session_state.correct_answers / total_questions) * 100
     
-    st.markdown(f"### Tu calificación final es: {st.session_state.correct_answers}/{total_questions} ({percentage:.1f}%)")
+    st.markdown(f"### Your final grade is: {st.session_state.correct_answers}/{total_questions} ({percentage:.1f}%)")
     
     if percentage <= 50:
-        st.write("Necesitas trabajar más, ¡sigue adelante!")
+        st.write("You need more practice. Keep going!")
     elif percentage <= 70:
-        st.write("El esfuerzo ha sido bueno, pero aún hay más por hacer.")
+        st.write("Good effort, but there's room for improvement.")
     elif percentage <= 85:
-        st.write("Bien, pero puedes hacerlo mejor.")
+        st.write("Well done, but you can do better.")
     elif percentage <= 90:
-        st.write("¡Muy bien!")
+        st.write("Very good!")
     else:
-        st.write("¡Excelente!")
+        st.write("Excellent!")
 
-    # Reset quiz para preguntas incorrectas
-    if st.session_state.incorrect_questions:
-        st.session_state.question_list = st.session_state.incorrect_questions.copy()
-        random.shuffle(st.session_state.question_list)
+    # Option to retry incorrect questions
+    if st.button("Retry Incorrect Questions") and st.session_state.incorrect_questions:
+        question_list = st.session_state.incorrect_questions.copy()
+        random.shuffle(question_list)
         st.session_state.incorrect_questions.clear()
         st.session_state.correct_answers = 0
+        st.session_state.current_question = 0
         st.session_state.answered_questions.clear()
         st.experimental_rerun()
