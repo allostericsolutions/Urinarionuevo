@@ -58,13 +58,14 @@ elif subtema == "The Urinary Tract":
     # (textos, imágenes, videos, etc.)
 
     # Pestaña de eponimos
-    subtema_eponimos = st.selectbox("Select a Subtopic:", ["Eponyms"])
+    if subtema == "The Urinary Tract":
+        subtema_eponimos = st.selectbox("Select a Subtopic:", ["Eponyms"])
 
-    if subtema_eponimos == "Eponyms":
-        st.write("##### Eponyms related to Urinary Tract Conditions:")
-        st.write("**Henoch-Schönlein purpura:**  Is an inflammatory disorder that affects small blood vessels, causing a purple rash on the skin, abdominal and joint pain, and can also affect the kidneys.")
-        st.write("**Nutcracker syndrome:**  Is a condition caused by compression of the left renal vein between the aorta and the superior mesenteric artery, which can lead to problems with renal blood flow.")
-        st.write("**Wilms tumor (nephroblastoma):**  Is a type of kidney cancer that primarily affects children. It can be referred to as nephroblastoma and can be life-threatening if left untreated.")
+        if subtema_eponimos == "Eponyms":
+            st.write("##### Eponyms related to Urinary Tract Conditions:")
+            st.write("**Henoch-Schönlein purpura:**  Is an inflammatory disorder that affects small blood vessels, causing a purple rash on the skin, abdominal and joint pain, and can also affect the kidneys.")
+            st.write("**Nutcracker syndrome:**  Is a condition caused by compression of the left renal vein between the aorta and the superior mesenteric artery, which can lead to problems with renal blood flow.")
+            st.write("**Wilms tumor (nephroblastoma):**  Is a type of kidney cancer that primarily affects children. It can be referred to as nephroblastoma and can be life-threatening if left untreated.")
 
 elif subtema == "The Adrenal Glands":
     st.write("#### The Adrenal Glands")
