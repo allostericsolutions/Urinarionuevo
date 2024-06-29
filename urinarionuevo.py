@@ -2,7 +2,12 @@ import random
 import streamlit as st
 
 # Corporate branding
-st.image("https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png", use_column_width=True)
+st.markdown(
+    """<div style="text-align: center;">
+    <img src="https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png" style="width:50%; max-width:200px;">
+    </div>""",
+    unsafe_allow_html=True
+)
 st.markdown("[Visit our website](https://www.allostericsolutions.com)")
 st.markdown("Contact: [franciscocuriel@allostericsolutions.com](mailto:franciscocuriel@allostericsolutions.com)")
 
@@ -69,10 +74,11 @@ if 'current_question' not in st.session_state:
 def create_question(question, options, correct_answer):
     st.write(f"**{question}**")
 
-    selected_option = st.radio("Select an option", options, index=0, key=f"radio_{st.session_state.current_question}")
+    options = ["Select an option"] + options
+    selected_option = st.selectbox("Select an option", options, key=f"selectbox_{st.session_state.current_question}")
     
     if st.button("Submit", key=f"button_{st.session_state.current_question}"):
-        if selected_option != options[0]:
+        if selected_option != "Select an option":
             if selected_option == correct_answer:
                 st.success("Correct")
                 st.session_state.correct_answers += 1
@@ -83,6 +89,8 @@ def create_question(question, options, correct_answer):
             st.session_state.answered_questions.append((question, options, correct_answer))
             st.session_state.current_question += 1
             st.experimental_rerun()  # Force a rerun to show the next question
+        else:
+          st.warning("Please select an option.")
 
 # Display the current question
 if st.session_state.current_question < len(question_list):
