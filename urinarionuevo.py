@@ -11,7 +11,8 @@ CONTACT_EMAIL = "franciscocuriel@allostericsolutions.com"
 def generate_pdf(responses):
     pdf = FPDF()
     pdf.add_page()
-    pdf.set_font("Arial", size=12)
+    # Use UTF-8 encoding for the font (check fpdf documentation for details)
+    pdf.set_font("Arial", size=12, encoding='utf-8') 
 
     # Add logo
     pdf.image(LOGO_URL, x=10, y=8, w=25)
@@ -161,7 +162,7 @@ else:
     if st.button("Download PDF with Explanations"):
         responses = {q[0]: questions_and_answers[q[0]] for q in st.session_state.answered_questions}
         pdf = generate_pdf(responses)
-        pdf_output = pdf.output(dest='S').encode('latin1')
+        pdf_output = pdf.output(dest='S').encode('utf-8')  # Encode using UTF-8
         st.download_button(label="Download PDF",
                            data=pdf_output,
                            file_name="ultrasound_explanations.pdf",
