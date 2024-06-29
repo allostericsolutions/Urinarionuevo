@@ -1,3 +1,4 @@
+```python
 import random
 import streamlit as st
 
@@ -65,21 +66,21 @@ if 'answered_questions' not in st.session_state:
     st.session_state.answered_questions = []
 if 'current_question' not in st.session_state:
     st.session_state.current_question = 0  # Start with the first question
-    
+
 def create_question(question, options, correct_answer):
     st.write(f"**{question}**")
+
+    selected_option = st.radio("Select an option", options, index=0, key=f"radio_{st.session_state.current_question}")
     
-    selected_option = st.radio("", options, key=question, index=-1)  # Do not preselect any option
-    
-    if st.button("Submit", key=f"button_{question}"):
-        if selected_option:
+    if st.button("Submit", key=f"button_{st.session_state.current_question}"):
+        if selected_option != options[0]:
             if selected_option == correct_answer:
                 st.success("Correct")
                 st.session_state.correct_answers += 1
             else:
                 st.error("Incorrect")
                 st.session_state.incorrect_questions.append((question, options, correct_answer))
-            
+                
             st.session_state.answered_questions.append((question, options, correct_answer))
             st.session_state.current_question += 1
             st.experimental_rerun()  # Force a rerun to show the next question
@@ -90,7 +91,7 @@ if st.session_state.current_question < len(question_list):
     create_question(question, q_data["options"], q_data["answer"])
 else:
     st.write("Quiz Completed")
-
+    
     # Show grade
     total_questions = len(questions_and_answers)
     percentage = (st.session_state.correct_answers / total_questions) * 100
@@ -107,7 +108,7 @@ else:
         st.write("Very good!")
     else:
         st.write("Excellent!")
-
+    
     # Option to retry incorrect questions
     if st.button("Retry Incorrect Questions") and st.session_state.incorrect_questions:
         question_list = st.session_state.incorrect_questions.copy()
