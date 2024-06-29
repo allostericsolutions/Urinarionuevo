@@ -4,7 +4,7 @@ import streamlit as st
 # Corporate branding
 st.markdown(
     """<div style="text-align: center;">
-    <img src="https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png" style="width:50%; max-width:200px;">
+    <img src="https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png" style="width:50%; max-width:400px;">
     </div>""",
     unsafe_allow_html=True
 )
