@@ -52,13 +52,19 @@ NUM_QUESTIONS = 8
 
 # Initialize session state
 def initialize_state():
-    st.session_state.correct_answers = 0
-    st.session_state.answered_questions = []
-    st.session_state.current_question = 0
-    st.session_state.incorrect_questions = []
-    st.session_state.question_list = random.sample(list(questions_and_answers.items()), NUM_QUESTIONS)
+    if len(questions_and_answers) >= NUM_QUESTIONS:  # Check if there are enough questions
+        st.session_state.correct_answers = 0
+        st.session_state.answered_questions = []
+        st.session_state.current_question = 0
+        st.session_state.incorrect_questions = []
+        st.session_state.question_list = random.sample(list(questions_and_answers.items()), NUM_QUESTIONS)
+    else:
+        st.error(f"Not enough questions in the pool to sample {NUM_QUESTIONS} questions.")
 
 if 'question_list' not in st.session_state:
+    initialize_state()
+elif len(st.session_state.question_list) != NUM_QUESTIONS and not st.session_state.incorrect_questions:
+    # Solo resetear si no están tratando de reintentar las incorrectas
     initialize_state()
 
 # Create Question function
