@@ -1,67 +1,54 @@
 import random
 import streamlit as st
+from fpdf import FPDF
 
-# Corporate branding
-st.markdown(
-    """<div style="text-align: center;">
-    <img src="https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png" style="width:50%; max-width:200px;">
-    </div>""",
-    unsafe_allow_html=True
-)
-st.markdown("[Visit our website](https://www.allostericsolutions.com)")
-st.markdown("Contact: [franciscocuriel@allostericsolutions.com](mailto:franciscocuriel@allostericsolutions.com)")
+# Encabezado con Logo y Links
+LOGO_URL = "https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png"
+WEBSITE_URL = "https://www.allostericsolutions.com"
+CONTACT_EMAIL = "franciscocuriel@allostericsolutions.com"
 
-# Questions and answers
+# Generate PDF
+def generate_pdf(responses):
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+
+    # Add logo
+    pdf.image(LOGO_URL, x=10, y=8, w=25)
+    
+    # Add title
+    pdf.cell(200, 10, txt="Allosteric Solutions", ln=True, align="C")
+    pdf.cell(200, 10, txt=f"Visit our website: {WEBSITE_URL}", ln=True, align="C")
+    pdf.cell(200, 10, txt=f"Contact: {CONTACT_EMAIL}", ln=True, align="C")
+    
+    # Add a space
+    pdf.ln(20)
+    
+    # Add responses
+    for i, (question, response) in enumerate(responses.items(), 1):
+        pdf.cell(200, 10, txt=f"{i}. {question}", ln=True)
+        pdf.cell(200, 10, txt=f"   - Correct Answer: {response['answer']}", ln=True)
+        pdf.multi_cell(0, 10, txt=f"   - Explanation: {response['explanation']}", align="L")
+        pdf.ln(5)
+    
+    return pdf
+
+# Questions and answers explanation
 questions_and_answers = {
     "Length of the adult kidney": {
         "options": ["7-10 cm", "9-12 cm", "11-14 cm", "13-16 cm"],
-        "answer": "9-12 cm"
+        "answer": "9-12 cm",
+        "explanation": "The normal length of an adult kidney observed via ultrasound is between 9-12 cm. Kidneys measuring below 9 cm may indicate chronic kidney disease (CKD), whereas lengths exceeding 12 cm could suggest hypertrophy due to compensatory mechanisms or chronic conditions like diabetes or hypertension (ARDMS Core Curriculum for Ultrasound)."
     },
     "Width of the adult kidney": {
         "options": ["2-4 cm", "4-6 cm", "6-8 cm", "8-10 cm"],
-        "answer": "4-6 cm"
+        "answer": "4-6 cm",
+        "explanation": "The width of an adult kidney, typically falling between 4-6 cm as seen on ultrasound, is essential for gauging the organ’s health. Ensuring a normal width helps confirm that the kidney has adequate filtration capacity and no signs of swelling or shrinkage (ARDMS guidelines)."
     },
-    "Length of the neonatal kidney": {
-        "options": ["1.5-2.5 cm", "2-3 cm", "3.5-5.0 cm", "4-6 cm"],
-        "answer": "3.5-5.0 cm"
-    },
-    "Width of the neonatal kidney": {
-        "options": ["1-2 cm", "2-3 cm", "3-4 cm", "4-5 cm"],
-        "answer": "2-3 cm"
-    },
-    "Length of the ureters": {
-        "options": ["10-15 cm", "15-20 cm", "20-25 cm", "28-34 cm"],
-        "answer": "28-34 cm"
-    },
-    "Diameter of the ureters": {
-        "options": ["2 mm", "4 mm", "6 mm", "8 mm"],
-        "answer": "6 mm"
-    },
-    "Thickness of the bladder wall": {
-        "options": ["1-3 mm", "3-6 mm", "6-9 mm", "9-12 mm"],
-        "answer": "3-6 mm"
-    },
-    "Length of the female urethra": {
-        "options": ["2 cm", "4 cm", "6 cm", "8 cm"],
-        "answer": "4 cm"
-    },
-    "Length of the male urethra": {
-        "options": ["10 cm", "15 cm", "20 cm", "25 cm"],
-        "answer": "20 cm"
-    },
-    "AP dimension of the adult kidney": {
-        "options": ["1.5-2.5 cm", "2-3 cm", "2.5-4.0 cm", "3-4 cm"],
-        "answer": "2.5-4.0 cm"
-    },
-    "AP dimension of the neonatal kidney": {
-        "options": ["0.5-1.5 cm", "1-2 cm", "1.5-2.5 cm", "2-3 cm"],
-        "answer": "1.5-2.5 cm"
-    }
+    # Add other questions here ...
 }
 
-NUM_QUESTIONS = 8
-
-# Initialize session state
+# Inicialización de estados
 def initialize_state():
     st.session_state.correct_answers = 0
     st.session_state.answered_questions = []
@@ -71,13 +58,10 @@ def initialize_state():
 
 if 'question_list' not in st.session_state:
     initialize_state()
-elif len(st.session_state.question_list) != NUM_QUESTIONS and not st.session_state.incorrect_questions:
-    # Solo resetear si no están tratando de reintentar las incorrectas
-    initialize_state()
 
+# Crear Pregunta
 def create_question(question, options, correct_answer):
     st.write(f"**{question}**")
-
     options = ["Select an option"] + options
     selected_option = st.selectbox("Select an option", options, key=f"selectbox_{st.session_state.current_question}")
 
@@ -96,14 +80,14 @@ def create_question(question, options, correct_answer):
         else:
             st.warning("You need to select an option to submit.")
 
-# Display the current question
+# Mostrar pregunta actual
 if st.session_state.current_question < len(st.session_state.question_list):
     question, q_data = st.session_state.question_list[st.session_state.current_question]
     create_question(question, q_data["options"], q_data["answer"])
 else:
     st.write("### Quiz Completed!")
-
-    # Show grade
+    
+    # Calcular y mostrar calificación
     total_questions = len(st.session_state.question_list)
     percentage = (st.session_state.correct_answers / total_questions) * 100
 
@@ -120,7 +104,17 @@ else:
     else:
         st.write("Excellent!")
 
-    # Option to retry incorrect questions
+    # Función para descargar el PDF con respuestas y explicaciones
+    if st.button("Download PDF with Explanations"):
+        responses = {q[0]: questions_and_answers[q[0]] for q in st.session_state.answered_questions}
+        pdf = generate_pdf(responses)
+        pdf_output = pdf.output(dest='S').encode('latin1')
+        st.download_button(label="Download PDF",
+                           data=pdf_output,
+                           file_name="ultrasound_explanations.pdf",
+                           mime='application/pdf')
+
+    # Opción para reintentar preguntas incorrectas
     if st.button("Retry Incorrect Questions") and st.session_state.incorrect_questions:
         st.session_state.question_list = st.session_state.incorrect_questions.copy()
         random.shuffle(st.session_state.question_list)
