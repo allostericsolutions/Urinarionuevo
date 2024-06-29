@@ -2,10 +2,12 @@ import streamlit as st
 
 st.title("Ultrasound Exam")
 
-# Mostrar logo, contacto y sitio web antes de las pestañas
-st.image("assets/logo.png")
-st.write("Contacto:", open("assets/contacto.txt").read())
-st.write("Sitio web:", open("assets/sitio_web.txt").read())
+# Mostrar la imagen del logo desde la URL
+st.image("https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png") 
+
+# Mostrar el contacto y el sitio web
+st.write("Contacto:", "www.allostericsolutions.com")
+st.write("Sitio web:", "franciscocuriel@allostericsolutions.com")
 
 tab1, tab2 = st.tabs(["Learning", "Evaluation"])
 
