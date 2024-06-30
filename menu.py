@@ -56,7 +56,8 @@ elif subtema == "The Urinary Tract":
     st.write("#### The Urinary Tract")
     # Ejecuta el módulo de "The Urinary Tract"
     exec(open('urinary_tract/urinary_tract.py').read())
-    exec(open('urinary_tract/urinary_anatomy_physiology.py').read())
+     # Ejecuta el módulo de "The Urinary Tract"
+    exec(open('urinary_tract/anatomy_physiology.py').read())
 elif subtema == "The Adrenal Glands":
     st.write("#### The Adrenal Glands")
     # Agrega aquí el contenido de "The Adrenal Glands"
