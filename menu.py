@@ -3,7 +3,7 @@ import streamlit as st
 st.title("Ultrasound Exam")
 
 # Mostrar logo, contacto y sitio web antes de las pestañas
-st.image("https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png", width=400)
+st.image("https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png", width=350)
 st.write("Contacto:", "www.allostericsolutions.com")
 st.write("Sitio web:", "franciscocuriel@allostericsolutions.com")
 
