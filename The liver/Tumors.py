@@ -1,11 +1,19 @@
 import streamlit as st
 
-# Variable para controlar la visibilidad de la sección de tumores benignos
-mostrar_tumores_benignos = st.session_state.get('mostrar_tumores_benignos', False)
+# Inicializar la variable en session_state
+if 'mostrar_tumores_benignos' not in st.session_state:
+    st.session_state.mostrar_tumores_benignos = False
 
-# Botón para alternar la visibilidad del expander
+if 'mostrar_tumores_malignos' not in st.session_state:
+    st.session_state.mostrar_tumores_malignos = False
+
+# Botón para alternar la visibilidad del expander de tumores benignos
 if st.button("Benign Liver Tumors"):
-    st.session_state.mostrar_tumores_benignos = not mostrar_tumores_benignos
+    st.session_state.mostrar_tumores_benignos = not st.session_state.mostrar_tumores_benignos
+
+# Botón para alternar la visibilidad del expander de tumores malignos
+if st.button("Malignant Liver Tumors"):
+    st.session_state.mostrar_tumores_malignos = not st.session_state.mostrar_tumores_malignos
 
 # Función para estilizar los títulos principales
 def style_title(title):
@@ -18,7 +26,7 @@ def style_subtitle(subtitle):
 # Sección que se expande y se contrae para los tumores benignos del hígado
 with st.expander("Benign Liver Tumors - Flash Card Style:", expanded=st.session_state.mostrar_tumores_benignos):
 
-    # Hemangioma Cavernoso
+    # Cavernous Hemangioma
     st.markdown(style_title("Cavernous Hemangioma"), unsafe_allow_html=True)
     st.markdown(style_subtitle("Symptoms"), unsafe_allow_html=True)
     st.write(" - Usually asymptomatic.")
@@ -36,7 +44,7 @@ with st.expander("Benign Liver Tumors - Flash Card Style:", expanded=st.session_
     st.write(" - Cyst.")
     st.write(" - Hepatocellular carcinoma (rarely).")
     
-    # Hiperplasia Nodular Focal (FNH)
+    # Focal Nodular Hyperplasia (FNH)
     st.markdown(style_title("Focal Nodular Hyperplasia (FNH)"), unsafe_allow_html=True)
     st.markdown(style_subtitle("Symptoms"), unsafe_allow_html=True)
     st.write(" - Usually asymptomatic.")
@@ -95,3 +103,59 @@ with st.expander("Benign Liver Tumors - Flash Card Style:", expanded=st.session_
     st.markdown(style_subtitle("Differential Diagnosis"), unsafe_allow_html=True)
     st.write(" - Liver abscess.")
     st.write(" - Liver neoplasm.")
+
+# Sección que se expande y se contrae para los tumores malignos del hígado
+with st.expander("Malignant Liver Tumors - Flash Card Style:", expanded=st.session_state.mostrar_tumores_malignos):
+
+    # Hepatocellular Carcinoma (HCC)
+    st.markdown(style_title("Hepatocellular Carcinoma (HCC)"), unsafe_allow_html=True)
+    st.write(" - Most common primary form of liver cancer.")
+    st.write(" - HCC is not encountered as often as metastatic liver disease.")
+    st.write(" - Most often seen in men and frequently accompanied by cirrhosis or chronic hepatitis.")
+    st.write(" - Other causes include hemochromatosis, von Gierke disease, and Wilson disease.")
+    st.write(" - The malignant mass associated with HCC is referred to as a hepatoma.")
+    st.write(" - Hepatomas can invade the portal veins or hepatic veins.")
+    st.write(" - Occlusion of the hepatic veins, with possible tumor invasion into the IVC, is termed Budd–Chiari syndrome, and thus the sonographic evaluation of pertinent vasculature is warranted for evidence of tumor thrombus.")
+    st.write(" - Color Doppler may yield evidence of hypervascularity within the mass, although this is not a specific indicator for malignancy.")
+    st.markdown(style_subtitle("Clinical Findings"), unsafe_allow_html=True)
+    st.write(" - Possible abnormal liver function tests.")
+    st.write(" - Signs of cirrhosis.")
+    st.write(" - History of chronic hepatitis.")
+    st.write(" - Unexplained weight loss.")
+    st.write(" - Hepatomegaly.")
+    st.write(" - Fever.")
+    st.write(" - Abdominal swelling with ascites.")
+    st.write(" - Perhaps a palpable mass.")
+    st.write(" - Elevated serum alpha-fetoprotein (AFP).")
+    st.markdown(style_subtitle("Key USG Findings"), unsafe_allow_html=True)
+    st.write(" - Solitary, small, hypoechoic mass, or as heterogeneous masses scattered throughout the liver.")
+    st.write(" - A hypoechoic halo may be noted around the hepatoma as well, yielding the target or bull’s-eye pattern.")
+    st.write(" - The target lesion will yield a hypoechoic rim, with the center of the mass often isoechoic to normal liver tissue.")
+    st.write(" - Possible ascites.")
+    st.markdown(style_subtitle("Differential Diagnosis"), unsafe_allow_html=True)
+    st.write(" - Metastasis.")
+    st.write(" - Benign liver tumors (e.g., hemangioma, FNH, adenoma)")
+
+    # Hepatic Metastasis
+    st.markdown(style_title("Hepatic Metastasis"), unsafe_allow_html=True)
+    st.write(" - The liver is a common location for metastatic disease to manifest in the abdomen.")
+    st.write(" - Metastatic liver disease is the most common form of liver cancer.")
+    st.write(" - The malignant cells from other sites enter the liver through the portal veins or lymphatic channels.")
+    st.write(" - Primary cancers that metastasize to the liver include the gallbladder, colon, stomach, pancreas, breast, and lung, with the latter being the most common primary source.")
+    st.write(" - Patients with hepatic metastasis may present with weight loss, jaundice, right upper quadrant pain, hepatomegaly, and ascites.")
+    st.write(" - However, in about half of patients, there are no clinical signs or symptoms, including the possibility of normal liver function tests initially.")
+    st.markdown(style_subtitle("Clinical Findings"), unsafe_allow_html=True)
+    st.write(" - Abnormal liver function test (possibly)")
+    st.write(" - Weight loss")
+    st.write(" - Jaundice")
+    st.write(" - Right upper quadrant pain")
+    st.write(" - Hepatomegaly")
+    st.write(" - Abdominal swelling with ascites")
+    st.markdown(style_subtitle("Key USG Findings"), unsafe_allow_html=True)
+    st.write(" - Hyperechoic, hypoechoic, calcified, cystic, or heterogeneous masses")
+    st.write(" - Mass or masses demonstrating a hypoechoic rim and central echogenic region")
+    st.write(" - Diffusely heterogeneous liver")
+    st.write(" - Possible ascites")
+    st.markdown(style_subtitle("Differential Diagnosis"), unsafe_allow_html=True)
+    st.write(" - HCC")
+    st.write(" - Benign liver tumors (e.g., hemangioma, FNH, adenoma)")
