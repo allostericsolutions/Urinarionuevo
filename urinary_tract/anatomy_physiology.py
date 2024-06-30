@@ -3,10 +3,6 @@ import streamlit as st
 # Variable para controlar la visibilidad de la sección de anatomía y fisiología
 mostrar_anatomia = False
 
-# Botón para mostrar la sección de anatomía y fisiología
-if st.button("Show Anatomy and Physiology"):
-    mostrar_anatomia = not mostrar_anatomia
-
 # Función para estilizar los títulos
 def style_title(title):
     return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
