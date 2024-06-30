@@ -1,9 +1,5 @@
 import streamlit as st
 
-# Botón para alternar la visibilidad del expander
-if st.button("Eponyms"):
-    st.session_state.mostrar_eponimos = not st.session_state.mostrar_eponimos
-
 # Función para estilizar los títulos dentro del expander
 def style_title(title):
     return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
