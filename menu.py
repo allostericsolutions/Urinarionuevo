@@ -7,7 +7,7 @@ st.image("https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutio
 st.write("Contacto:", "www.allostericsolutions.com")
 st.write("Sitio web:", "franciscocuriel@allostericsolutions.com")
 
-st.write("### ARDMS for Abdominal Ultrasound") 
+st.write("### ARDMS for Abdominal Ultrasound")
 
 # Opciones de subtema
 subtema = st.radio("Select a Subtopic:", [
@@ -55,7 +55,7 @@ elif subtema == "The Spleen":
 elif subtema == "The Urinary Tract":
     st.write("#### The Urinary Tract")
     # Ejecuta el módulo de "The Urinary Tract"
-    exec(open('urinary_tract/urinary_tract.py').read())
+    st.run_the_script(path="urinary_tract/urinary_tract.py") 
 elif subtema == "The Adrenal Glands":
     st.write("#### The Adrenal Glands")
     # Agrega aquí el contenido de "The Adrenal Glands"
@@ -89,4 +89,4 @@ elif subtema == "The Musculoskeletal Imaging, Breast, and Superficial Structures
 st.write("## Evaluation Mode")
 
 # Ejecuta el módulo de evaluación
-st.run_the_script(path="evaluacion.py")
+st.run_the_script(path="evaluacion.py") 
