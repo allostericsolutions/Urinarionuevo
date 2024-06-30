@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Ultrasound Exam")
+st.title("Abdomen ARDMS")
 
 # Mostrar logo, contacto y sitio web antes de las pestañas
 st.image("https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png", width=400)
