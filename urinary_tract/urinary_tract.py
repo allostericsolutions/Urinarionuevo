@@ -1,9 +1,5 @@
 import streamlit as st
 
-# Inicializar la variable en session_state
-if 'mostrar_eponimos' not in st.session_state:
-    st.session_state.mostrar_eponimos = False
-
 # Botón para alternar la visibilidad del expander
 if st.button("Eponyms"):
     st.session_state.mostrar_eponimos = not st.session_state.mostrar_eponimos
