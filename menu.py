@@ -54,9 +54,8 @@ elif subtema == "The Spleen":
     # (textos, imágenes, videos, etc.)
 elif subtema == "The Urinary Tract":
     st.write("#### The Urinary Tract")
-
     # Ejecuta el código de urinary_tract
-    exec(open('urinary_tract').read()) 
+    exec(open('urinary_tract/urinary_tract.py').read()) 
 
 elif subtema == "The Adrenal Glands":
     st.write("#### The Adrenal Glands")
