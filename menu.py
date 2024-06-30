@@ -3,7 +3,7 @@ import streamlit as st
 st.title("Ultrasound Exam")
 
 # Mostrar logo, contacto y sitio web antes de las pestañas
-st.image("https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png", width=350)
+st.image("https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png", width=400)
 st.write("Contacto:", "www.allostericsolutions.com")
 st.write("Sitio web:", "franciscocuriel@allostericsolutions.com")
 
@@ -87,7 +87,6 @@ elif subtema == "The Musculoskeletal Imaging, Breast, and Superficial Structures
 
 
 st.write("## Evaluation Mode")
-st.write("This section will test your knowledge about ultrasound measurements.")
 
 # Ejecuta el módulo de evaluación
 st.run_the_script(path="evaluacion.py") 
