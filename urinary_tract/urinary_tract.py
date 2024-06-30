@@ -12,11 +12,15 @@ if st.button("Eponyms"):
 def style_title(title):
     return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
 
-# Título del expander sin HTML
-expander_title = "Eponyms related to Urinary Tract Conditions"
+# Crear un título estilizado para el expander con tamaño de fuente aumentado
+expander_title = """
+<div style='color:blue; font-weight:bold; font-size:20px;'>
+Eponyms related to Urinary Tract Conditions
+</div>
+"""
 
 # Sección que se expande y se contrae
-with st.expander(expander_title, expanded=st.session_state.mostrar_eponimos):
+with st.expander(st.markdown(expander_title, unsafe_allow_html=True), expanded=st.session_state.mostrar_eponimos):
     st.markdown(f"{style_title('Henoch-Schönlein purpura:')}", unsafe_allow_html=True)
     st.write("Is an inflammatory disorder that affects small blood vessels, causing a purple rash on the skin, abdominal and joint pain, and can also affect the kidneys.")
     
