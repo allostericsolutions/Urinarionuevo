@@ -16,15 +16,17 @@ with st.expander("Anatomy and Physiology of the Kidney - Flash Card Style:", exp
     st.markdown(style_title("1. Urinary System Components"), unsafe_allow_html=True)
     st.write("    - Upper urinary tract: kidneys and ureters")
     st.write("    - Lower urinary tract: bladder and urethra")
-   
-    st.markdown(style_title("2. Functional Unit" ), unsafe_allow_html=True)
-    st.write("    -Nephron") 
+
+    st.markdown(style_title("2. Functional Unit"), unsafe_allow_html=True)
+    st.write("    - Nephron")
+    
     st.markdown(style_title("3. Nephron Development"), unsafe_allow_html=True)
     st.write("    - Functions by the 9th week of gestation")
     st.write("    - Urine production starts between 11-13 weeks")
    
-    st.markdown(style_title("4. Importance for Fetus: Urine forms the majority of amniotic fluid"), unsafe_allow_html=True)
-    
+    st.markdown(style_title("4. Importance for Fetus"), unsafe_allow_html=True)
+    st.write("    - Urine forms the majority of amniotic fluid")
+   
     st.markdown(style_title("5. Kidneys' Functions"), unsafe_allow_html=True)
     st.write("    - Detoxify and filter blood")
     st.write("    - Excrete metabolic waste")
@@ -55,23 +57,22 @@ with st.expander("Anatomy and Physiology of the Kidney - Flash Card Style:", exp
     st.write("    - Renal parenchyma: includes renal medulla (absorption, renal pyramids) and renal cortex (blood filtration)")
     st.write("    - Renal sinus: contains the renal collecting system (minor calices, major calices, renal pelvis, and infundibula)")
    
-    st.markdown(style_title("11. Renal Pelvis: Funnel-shaped, collects urine before moving to the ureter"), unsafe_allow_html=True)
+    st.markdown(style_title("11. Renal Pelvis"), unsafe_allow_html=True)
+    st.write("    - Funnel-shaped, collects urine before moving to the ureter")
     
-    st.markdown(style_title("Vascular Anatomy of the Kidneys"), unsafe_allow_html=True)
-    
-    st.markdown(style_title("12. Renal Arteries"), unsafe_allow_html=True)
-    st.write("    - Branch from abdominal aorta below superior mesenteric artery")
-    st.write("    - Enter renal hilum, then segmental branches, interlobar arteries")
-    st.write("    - Interlobar arteries → arcuate arteries → interlobular arteries → afferent arterioles")
-   
-    st.markdown(style_title("13. Afferent Arterioles: Carry blood to the glomerulus for filtration"), unsafe_allow_html=True)
-    
-    st.markdown(style_title("14. Right Renal Artery: Longer, travels posterior to the inferior vena cava (IVC)"), unsafe_allow_html=True)
-    
-    st.markdown(style_title("15. Renal Veins"), unsafe_allow_html=True)
-    st.write("    - Exit at renal hilum, connect to the IVC")
-    st.write("    - Left renal vein: crosses between superior mesenteric artery and abdominal aorta, longer than right")
-   
-    st.markdown(style_title("16. Left Renal Vein Diameter"), unsafe_allow_html=True)
+    st.markdown(style_title("12. Vascular Anatomy of the Kidneys"), unsafe_allow_html=True)
+    st.write("    - Renal Arteries")
+    st.write("        - Branch from abdominal aorta below superior mesenteric artery")
+    st.write("        - Enter renal hilum, then segmental branches, interlobar arteries")
+    st.write("        - Interlobar arteries → arcuate arteries → interlobular arteries → afferent arterioles")
+    st.write("    - Afferent Arterioles")
+    st.write("        - Carry blood to the glomerulus for filtration")
+    st.write("    - Right Renal Artery")
+    st.write("        - Longer, travels posterior to the inferior vena cava (IVC)")
+    st.write("    - Renal Veins")
+    st.write("        - Exit at renal hilum, connect to the IVC")
+    st.write("        - Left renal vein: crosses between superior mesenteric artery and abdominal aorta, longer than right")
+        
+    st.markdown(style_title("13. Left Renal Vein Diameter"), unsafe_allow_html=True)
     st.write("    - Smaller as it travels between the superior mesenteric artery and abdominal aorta")
     st.write("    - More prominent past this point towards the kidney")
