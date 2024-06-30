@@ -8,9 +8,13 @@ if 'mostrar_eponimos' not in st.session_state:
 if st.button("Eponyms"):
     st.session_state.mostrar_eponimos = not st.session_state.mostrar_eponimos
 
+# Function to style the eponym titles
+def style_title(title):
+    return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
+
 # Expandable and collapsible section
 with st.expander("Eponyms related to Medical Conditions:", expanded=st.session_state.mostrar_eponimos):
-    st.write("Kaposi sarcoma: A cancer characterized by lesions on the skin and other areas; often linked to AIDS. Named after Moritz Kaposi.")
-    st.write("Morison Pouch: The space between the liver and the right kidney; also known as the posterior right subhepatic space. Named after James R. Morison.")
-    st.write("Space of Retzius: The area between the urinary bladder and the pubic bone; also referred to as the retropubic space. Named after Anders Retzius.")
-    st.write("Wilson disease: A genetic disorder leading to excess copper accumulation in the body. Named after Samuel Alexander Kinnier Wilson.")
+    st.markdown(style_title("Kaposi sarcoma:") + " A cancer characterized by lesions on the skin and other areas; often linked to AIDS. Named after Moritz Kaposi.", unsafe_allow_html=True)
+    st.markdown(style_title("Morison Pouch:") + " The space between the liver and the right kidney; also known as the posterior right subhepatic space. Named after James R. Morison.", unsafe_allow_html=True)
+    st.markdown(style_title("Space of Retzius:") + " The area between the urinary bladder and the pubic bone; also referred to as the retropubic space. Named after Anders Retzius.", unsafe_allow_html=True)
+    st.markdown(style_title("Wilson disease:") + " A genetic disorder leading to excess copper accumulation in the body. Named after Samuel Alexander Kinnier Wilson.", unsafe_allow_html=True)
