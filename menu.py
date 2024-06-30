@@ -10,7 +10,7 @@ st.write("Sitio web:", "franciscocuriel@allostericsolutions.com")
 st.write("### ARDMS for Abdominal Ultrasound") 
 
 # Opciones de subtema
-subtema = st.selectbox("Select a Subtopic:", [
+subtema = st.radio("Select a Subtopic:", [
     "Abdominal Sonography Overview",
     "The Liver",
     "The Gallbladder",
