@@ -5,7 +5,7 @@ if 'mostrar_eponimos' not in st.session_state:
     st.session_state.mostrar_eponimos = False
 
 # Botón para mostrar la sección de eponimos
-if st.button("Show Eponyms"):
+if st.button("Eponyms"):
     st.session_state.mostrar_eponimos = not st.session_state.mostrar_eponimos
 
 # Sección que se expande y se contrae 
