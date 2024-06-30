@@ -30,6 +30,8 @@ subtema = st.radio("Select a Subtopic:", [
 # Mostrar el contenido del subtema
 if subtema == "Abdominal Sonography Overview":
     st.write("#### Abdominal Sonography Overview")
+    # Ejecuta el módulo de "Abdominal Sonography Overview"
+    exec(open('Abdominal Sonography Overview/abdominaloverview.py').read())
     # Agrega aquí el contenido de "Abdominal Sonography Overview"
     # (textos, imágenes, videos, etc.)
 elif subtema == "The Liver":
