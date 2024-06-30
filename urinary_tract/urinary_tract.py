@@ -12,11 +12,16 @@ if st.button("Eponyms"):
 def style_title(title):
     return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
 
-# Crear un título estilizado para el expander
-expander_title = "<span style='color:gold; font-weight:bold;'>Eponyms related to Urinary Tract Conditions:</span>"
+# Título del expander sin HTML
+expander_title = "Eponyms related to Urinary Tract Conditions"
 
 # Sección que se expande y se contrae
 with st.expander(expander_title, expanded=st.session_state.mostrar_eponimos):
-    st.markdown(style_title("Henoch-Schönlein purpura:") + " Is an inflammatory disorder that affects small blood vessels, causing a purple rash on the skin, abdominal and joint pain, and can also affect the kidneys.", unsafe_allow_html=True)
-    st.markdown(style_title("Nutcracker syndrome:") + " Is a condition caused by compression of the left renal vein between the aorta and the superior mesenteric artery, which can lead to problems with renal blood flow.", unsafe_allow_html=True)
-    st.markdown(style_title("Wilms tumor (nephroblastoma):") + " Is a type of kidney cancer that primarily affects children. It can be referred to as nephroblastoma and can be life-threatening if left untreated.", unsafe_allow_html=True)
+    st.markdown(f"{style_title('Henoch-Schönlein purpura:')}", unsafe_allow_html=True)
+    st.write("Is an inflammatory disorder that affects small blood vessels, causing a purple rash on the skin, abdominal and joint pain, and can also affect the kidneys.")
+    
+    st.markdown(f"{style_title('Nutcracker syndrome:')}", unsafe_allow_html=True)
+    st.write("Is a condition caused by compression of the left renal vein between the aorta and the superior mesenteric artery, which can lead to problems with renal blood flow.")
+    
+    st.markdown(f"{style_title('Wilms tumor (nephroblastoma):')}", unsafe_allow_html=True)
+    st.write("Is a type of kidney cancer that primarily affects children. It can be referred to as nephroblastoma and can be life-threatening if left untreated.")
