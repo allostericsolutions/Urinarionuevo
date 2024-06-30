@@ -7,51 +7,71 @@ mostrar_anatomia = False
 if st.button("Show Anatomy and Physiology"):
     mostrar_anatomia = not mostrar_anatomia
 
+# Función para estilizar los títulos
+def style_title(title):
+    return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
+
 # Sección que se expande y se contrae para anatomía y fisiología
 with st.expander("Anatomy and Physiology of the Kidney - Flash Card Style:", expanded=mostrar_anatomia):
-    st.write("**1. Urinary System Components**")
+    st.markdown(style_title("1. Urinary System Components"), unsafe_allow_html=True)
     st.write("    - Upper urinary tract: kidneys and ureters")
     st.write("    - Lower urinary tract: bladder and urethra")
-    st.write("**2. Functional Unit: Nephron**")
-    st.write("**3. Nephron Development**")
+   
+    st.markdown(style_title("2. Functional Unit: Nephron"), unsafe_allow_html=True)
+    
+    st.markdown(style_title("3. Nephron Development"), unsafe_allow_html=True)
     st.write("    - Functions by the 9th week of gestation")
     st.write("    - Urine production starts between 11-13 weeks")
-    st.write("**4. Importance for Fetus: Urine forms the majority of amniotic fluid**")
-    st.write("**5. Kidneys' Functions**")
+   
+    st.markdown(style_title("4. Importance for Fetus: Urine forms the majority of amniotic fluid"), unsafe_allow_html=True)
+    
+    st.markdown(style_title("5. Kidneys' Functions"), unsafe_allow_html=True)
     st.write("    - Detoxify and filter blood")
     st.write("    - Excrete metabolic waste")
     st.write("    - Reabsorb amino acids, ions, glucose, and water")
     st.write("    - Maintain pH, iron, and salt balance")
     st.write("    - Regulate blood pressure via renin")
-    st.write("**6. Embryonic Development**")
+   
+    st.markdown(style_title("6. Embryonic Development"), unsafe_allow_html=True)
     st.write("    - Formed by 2 parenchymal masses (renunculi or ranunculi)")
     st.write("    - Initially in the pelvis, ascend to abdomen by 12 weeks")
-    st.write("**7. Ectopic Kidney**")
+   
+    st.markdown(style_title("7. Ectopic Kidney"), unsafe_allow_html=True)
     st.write("    - Most common location: pelvis")
     st.write("    - Ascension can be arrested along the typical migratory path")
-    st.write("**8. Adult Kidney Anatomy**")
+   
+    st.markdown(style_title("8. Adult Kidney Anatomy"), unsafe_allow_html=True)
     st.write("    - Bean-shaped, retroperitoneal")
     st.write("    - Left kidney higher due to liver size")
     st.write("    - Left kidney often slightly longer")
-    st.write("**9. Kidney Coverings (from outside to inside)**")
+   
+    st.markdown(style_title("9. Kidney Coverings (from outside to inside)"), unsafe_allow_html=True)
     st.write("    - Pararenal fat layer")
     st.write("    - Gerota fascia")
     st.write("    - Perirenal fat layer")
     st.write("    - Renal capsule")
-    st.write("**10. Kidney Parts**")
+   
+    st.markdown(style_title("10. Kidney Parts"), unsafe_allow_html=True)
     st.write("    - Renal parenchyma: includes renal medulla (absorption, renal pyramids) and renal cortex (blood filtration)")
     st.write("    - Renal sinus: contains the renal collecting system (minor calices, major calices, renal pelvis, and infundibula)")
-    st.write("**11. Renal Pelvis: Funnel-shaped, collects urine before moving to the ureter**")
-    st.write("**Vascular Anatomy of the Kidneys**")
-    st.write("**12. Renal Arteries**")
+   
+    st.markdown(style_title("11. Renal Pelvis: Funnel-shaped, collects urine before moving to the ureter"), unsafe_allow_html=True)
+    
+    st.markdown(style_title("Vascular Anatomy of the Kidneys"), unsafe_allow_html=True)
+    
+    st.markdown(style_title("12. Renal Arteries"), unsafe_allow_html=True)
     st.write("    - Branch from abdominal aorta below superior mesenteric artery")
     st.write("    - Enter renal hilum, then segmental branches, interlobar arteries")
     st.write("    - Interlobar arteries → arcuate arteries → interlobular arteries → afferent arterioles")
-    st.write("**13. Afferent Arterioles: Carry blood to the glomerulus for filtration**")
-    st.write("**14. Right Renal Artery: Longer, travels posterior to the inferior vena cava (IVC)**")
-    st.write("**15. Renal Veins**")
+   
+    st.markdown(style_title("13. Afferent Arterioles: Carry blood to the glomerulus for filtration"), unsafe_allow_html=True)
+    
+    st.markdown(style_title("14. Right Renal Artery: Longer, travels posterior to the inferior vena cava (IVC)"), unsafe_allow_html=True)
+    
+    st.markdown(style_title("15. Renal Veins"), unsafe_allow_html=True)
     st.write("    - Exit at renal hilum, connect to the IVC")
     st.write("    - Left renal vein: crosses between superior mesenteric artery and abdominal aorta, longer than right")
-    st.write("**16. Left Renal Vein Diameter**")
+   
+    st.markdown(style_title("16. Left Renal Vein Diameter"), unsafe_allow_html=True)
     st.write("    - Smaller as it travels between the superior mesenteric artery and abdominal aorta")
     st.write("    - More prominent past this point towards the kidney")
