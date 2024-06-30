@@ -34,8 +34,8 @@ if subtema == "Abdominal Sonography Overview":
     exec(open('Abdominal Sonography Overview/abdominaloverview.py').read())
 elif subtema == "The Liver":
     st.write("#### The Liver")
-    # Agrega aquí el contenido de "The Liver"
-    # (textos, imágenes, videos, etc.)
+    # Ejecuta el módulo de "The liver"
+    exec(open('The liver/tumors.py').read())
 elif subtema == "The Gallbladder":
     st.write("#### The Gallbladder")
     # Agrega aquí el contenido de "The Gallbladder"
