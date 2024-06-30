@@ -17,8 +17,8 @@ with st.expander("Anatomy and Physiology of the Kidney - Flash Card Style:", exp
     st.write("    - Upper urinary tract: kidneys and ureters")
     st.write("    - Lower urinary tract: bladder and urethra")
    
-    st.markdown(style_title("2. Functional Unit: Nephron"), unsafe_allow_html=True)
-    
+    st.markdown(style_title("2. Functional Unit" ), unsafe_allow_html=True)
+    st.write("    -Nephron") 
     st.markdown(style_title("3. Nephron Development"), unsafe_allow_html=True)
     st.write("    - Functions by the 9th week of gestation")
     st.write("    - Urine production starts between 11-13 weeks")
