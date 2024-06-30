@@ -4,10 +4,6 @@ import streamlit as st
 if 'mostrar_eponimos' not in st.session_state:
     st.session_state.mostrar_eponimos = False
 
-# Botón para mostrar la sección de eponimos
-if st.button("Eponyms"):
-    st.session_state.mostrar_eponimos = not st.session_state.mostrar_eponimos
-
 # Sección que se expande y se contrae 
 with st.expander("Eponyms related to Urinary Tract Conditions:", expanded=st.session_state.mostrar_eponimos):
     st.write("**Henoch-Schönlein purpura:**  Is an inflammatory disorder that affects small blood vessels, causing a purple rash on the skin, abdominal and joint pain, and can also affect the kidneys.")
