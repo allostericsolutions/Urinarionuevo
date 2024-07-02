@@ -1,4 +1,4 @@
-import streamlit as st .
+import streamlit as st 
 
 # Variable para controlar la visibilidad de la sección de anatomía y fisiología
 mostrar_anatomia = False
