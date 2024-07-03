@@ -66,7 +66,7 @@ elif subtema == "The Adrenal Glands":
     # (textos, imágenes, videos, etc.)
 elif subtema == "Abdominal Vasculature":
     st.write("#### Abdominal Vasculature")
-   # Ejecuta el módulo de "Abdominalvasculature/eponyms.py"
+   # Ejecuta el módulo de "Abdominalvasculature"
     exec(open('Abdominalvasculature/eponyms.py').read())
 elif subtema == "Gastrointestinal Tract and Abdominal Wall":
     st.write("#### Gastrointestinal Tract and Abdominal Wall")
