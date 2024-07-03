@@ -7,14 +7,6 @@ if 'mostrar_tumores_benignos' not in st.session_state:
 if 'mostrar_tumores_malignos' not in st.session_state:
     st.session_state.mostrar_tumores_malignos = False
 
-# Botón para alternar la visibilidad del expander de tumores benignos
-if st.button("Benign Liver Tumors"):
-    st.session_state.mostrar_tumores_benignos = not st.session_state.mostrar_tumores_benignos
-
-# Botón para alternar la visibilidad del expander de tumores malignos
-if st.button("Malignant Liver Tumors"):
-    st.session_state.mostrar_tumores_malignos = not st.session_state.mostrar_tumores_malignos
-
 # Función para estilizar los títulos principales
 def style_title(title):
     return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
