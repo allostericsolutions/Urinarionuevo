@@ -4,10 +4,6 @@ import streamlit as st
 if 'mostrar_eponimos' not in st.session_state:
     st.session_state.mostrar_eponimos = False
 
-# Button to show/hide the eponyms section
-if st.button("Eponyms"):
-    st.session_state.mostrar_eponimos = not st.session_state.mostrar_eponimos
-
 # Function to style the eponym titles
 def style_title(title):
     return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
