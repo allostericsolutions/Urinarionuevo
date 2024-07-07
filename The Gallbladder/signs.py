@@ -17,4 +17,4 @@ with st.expander("Signs related to Gallbladder:", expanded=st.session_state.most
     st.markdown(style_title("Olive sign:") + " Palpable hypertrophic pyloric muscle associated with pyloric stenosis", unsafe_allow_html=True)
     st.markdown(style_title("Murphy sign:") + " Pain with probe pressure over the gallbladder.", unsafe_allow_html=True)
     st.markdown(style_title("Pseudogallbladder sign:") + " Cystic structure noted in the gallbladder fossa without evidence of an actual gallbladder; associated with biliary atresia in children.", unsafe_allow_html=True)
-I've simply removed the original eponyms and replaced them with the new ones.
+
