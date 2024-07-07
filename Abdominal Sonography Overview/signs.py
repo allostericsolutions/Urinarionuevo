@@ -62,10 +62,11 @@ scrotum_signs = [
 # Pancreas
 pancreas_signs = [] # There are no eponymous signs for the pancreas in this list
 
-# Display the sections
-create_expandable_section("Gallbladder Ultrasound Signs:", gallbladder_signs)
-create_expandable_section("Liver Ultrasound Signs:", liver_signs)
-create_expandable_section("Lungs Ultrasound Signs:", lungs_signs)
-create_expandable_section("Bowel Ultrasound Signs:", bowel_signs)
-create_expandable_section("Scrotum Ultrasound Signs:", scrotum_signs)
-create_expandable_section("Pancreas Ultrasound Signs:", pancreas_signs)
+# Display the sections under a "Signs" expander
+with st.expander("Signs"):
+    create_expandable_section("Gallbladder Ultrasound Signs:", gallbladder_signs)
+    create_expandable_section("Liver Ultrasound Signs:", liver_signs)
+    create_expandable_section("Lungs Ultrasound Signs:", lungs_signs)
+    create_expandable_section("Bowel Ultrasound Signs:", bowel_signs)
+    create_expandable_section("Scrotum Ultrasound Signs:", scrotum_signs)
+    create_expandable_section("Pancreas Ultrasound Signs:", pancreas_signs)
