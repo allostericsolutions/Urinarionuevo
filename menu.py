@@ -43,8 +43,7 @@ elif subtema == "The Liver":
 elif subtema == "The Gallbladder":
     st.write("#### The Gallbladder")
     # Ejecuta el módulo de "The Gallblader"
-    import The_Gallbladder.signs  # Import the module directly
-    The_Gallbladder.signs.main() # Execute the main function in signs.py 
+       exec(open('The Gallbladder/signs.py').read())
 elif subtema == "The Bile Ducts":
     st.write("#### The Bile Ducts")
     # Agrega aquí el contenido de "The Bile Ducts"
