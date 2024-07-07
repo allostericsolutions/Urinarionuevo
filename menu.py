@@ -46,8 +46,8 @@ elif subtema == "The Gallbladder":
     exec(open('The Gallbladder/signs.py').read())
 elif subtema == "The Bile Ducts":
     st.write("#### The Bile Ducts")
-    # Agrega aquí el contenido de "The Bile Ducts"
-    # (textos, imágenes, videos, etc.)
+    # Ejecuta el módulo de "The Bile Ducts"
+    exec(open('The Bile Ducts/Eponyms.py').read())
 elif subtema == "The Pancreas":
     st.write("#### The Pancreas")
     # Ejecuta el módulo de "pancreas"
