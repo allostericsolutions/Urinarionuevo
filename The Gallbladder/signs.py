@@ -8,8 +8,8 @@ if 'mostrar_eponimos' not in st.session_state:
 def style_title(title):
     return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
 
-# Gallbladder Signs
-gallbladder_signs = [
+# The Gallbladder Signs
+The gallbladder_signs = [
     ("Ball-on-the-wall sign", "Appearance of a gallbladder polyp."),
     ("Cinnamon bun sign", "Short axis appearance of intussusception."),
     ("Whirlpool sign", "Cystic duct appearance with color Doppler associated with gallbladder torsion."),
