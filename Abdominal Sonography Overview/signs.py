@@ -4,7 +4,7 @@ import streamlit as st
 if 'mostrar_eponimos' not in st.session_state:
     st.session_state.mostrar_eponimos = False
 
-# Function to style the eponym titles
+# Function to style the sign titles
 def style_title(title):
     return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
 
@@ -17,7 +17,7 @@ def create_expandable_section(title, content):
 # Ultrasound Signs by Region
 
 # Gallbladder
-gallbladder_eponyms = [
+gallbladder_signs = [
     ("Ball-on-the-wall sign", "Appearance of a gallbladder polyp."),
     ("Cinnamon bun sign", "Air within the gallbladder wall associated with emphysematous cholecystitis."),
     ("Whirlpool sign", "Cystic duct appearance with color Doppler associated with gallbladder torsion."),
@@ -28,7 +28,7 @@ gallbladder_eponyms = [
 ]
 
 # Liver
-liver_eponyms = [
+liver_signs = [
     ("Central dot sign", "Echogenic dot in dilated intrahepatic ducts associated with Caroli disease."),
     ("Mickey sign", "Cross section appearance of the porta hepatis."),
     ("Starry sky sign", "Bright portal triads seen with hepatitis."),
@@ -38,13 +38,13 @@ liver_eponyms = [
 ]
 
 # Lungs
-lungs_eponyms = [
+lungs_signs = [
     ("Barcode sign", "Abnormal M-mode appearance of lung sliding indicating pneumothorax."),
     ("Seashore sign", "Normal M-mode tracing of lung sliding.")
 ]
 
 # Bowel
-bowel_eponyms = [
+bowel_signs = [
     ("Double-duct sign", "Dilatation of both the pancreatic duct and common bile duct."),
     ("Doughnut sign (target sign)", "Dilatation of both the pancreatic and common bile duct."),
     ("Keyboard sign", "Seen in small bowel obstruction."),
@@ -55,17 +55,17 @@ bowel_eponyms = [
 ]
 
 # Scrotum
-scrotum_eponyms = [
+scrotum_signs = [
     ("Central dot sign", "Torsed appendage of the testicle that can be seen superficially.")
 ]
 
 # Pancreas
-pancreas_eponyms = [] # There are no eponymous signs for the pancreas in this list
+pancreas_signs = [] # There are no eponymous signs for the pancreas in this list
 
 # Display the sections
-create_expandable_section("Gallbladder Ultrasound Signs:", gallbladder_eponyms)
-create_expandable_section("Liver Ultrasound Signs:", liver_eponyms)
-create_expandable_section("Lungs Ultrasound Signs:", lungs_eponyms)
-create_expandable_section("Bowel Ultrasound Signs:", bowel_eponyms)
-create_expandable_section("Scrotum Ultrasound Signs:", scrotum_eponyms)
-create_expandable_section("Pancreas Ultrasound Signs:", pancreas_eponyms)
+create_expandable_section("Gallbladder Ultrasound Signs:", gallbladder_signs)
+create_expandable_section("Liver Ultrasound Signs:", liver_signs)
+create_expandable_section("Lungs Ultrasound Signs:", lungs_signs)
+create_expandable_section("Bowel Ultrasound Signs:", bowel_signs)
+create_expandable_section("Scrotum Ultrasound Signs:", scrotum_signs)
+create_expandable_section("Pancreas Ultrasound Signs:", pancreas_signs)
