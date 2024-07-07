@@ -9,7 +9,6 @@ def style_title(title):
     return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
 
 # Ultrasound Signs by Region
-
 # Gallbladder
 gallbladder_signs = [
     ("Ball-on-the-wall sign", "Appearance of a gallbladder polyp."),
@@ -54,30 +53,31 @@ scrotum_signs = [
 ]
 
 # Pancreas
-pancreas_signs = [] # There are no eponymous signs for the pancreas in this list
+pancreas_signs = []  # There are no eponymous signs for the pancreas in this list
 
-# Display the sections 
-with st.expander("Ultrasound Signs"):
-    with st.expander("Gallbladder Ultrasound Signs:"):
-        for item in gallbladder_signs:
-            st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
+# Display the sections
+st.title("Ultrasound Signs")
 
-    with st.expander("Liver Ultrasound Signs:"):
-        for item in liver_signs:
-            st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
+with st.expander("Gallbladder Ultrasound Signs"):
+    for item in gallbladder_signs:
+        st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
 
-    with st.expander("Lungs Ultrasound Signs:"):
-        for item in lungs_signs:
-            st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
+with st.expander("Liver Ultrasound Signs"):
+    for item in liver_signs:
+        st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
 
-    with st.expander("Bowel Ultrasound Signs:"):
-        for item in bowel_signs:
-            st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
+with st.expander("Lungs Ultrasound Signs"):
+    for item in lungs_signs:
+        st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
 
-    with st.expander("Scrotum Ultrasound Signs:"):
-        for item in scrotum_signs:
-            st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
+with st.expander("Bowel Ultrasound Signs"):
+    for item in bowel_signs:
+        st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
 
-    with st.expander("Pancreas Ultrasound Signs:"):
-        for item in pancreas_signs:
-            st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True) 
+with st.expander("Scrotum Ultrasound Signs"):
+    for item in scrotum_signs:
+        st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
+
+with st.expander("Pancreas Ultrasound Signs"):
+    for item in pancreas_signs:
+        st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
