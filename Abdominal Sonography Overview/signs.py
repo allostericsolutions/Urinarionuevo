@@ -12,10 +12,10 @@ def style_title(title):
 # Gallbladder
 gallbladder_signs = [
     ("Ball-on-the-wall sign", "Appearance of a gallbladder polyp."),
-    ("Cinnamon bun sign", "Air within the gallbladder wall associated with emphysematous cholecystitis."),
+    ("Cinnamon bun sign", " Short axis appearance of intussusception "),
     ("Whirlpool sign", "Cystic duct appearance with color Doppler associated with gallbladder torsion."),
     ("Wall-echo-shadow (WES) sign", "Appearance of a gallbladder completely filled with stones."),
-    ("Olive sign", "Pain with probe pressure over the gallbladder."),
+    ("Olive sign", "Palpable hypertrophic pyloric muscle associated with pyloric stenosis"),
     ("Murphy sign", "Pain with probe pressure over the gallbladder."),
     ("Pseudogallbladder sign", "Cystic structure noted in the gallbladder fossa without evidence of an actual gallbladder; associated with biliary atresia in children.")
 ]
