@@ -29,7 +29,7 @@ if st.button("Check Answer"):
         st.markdown(
             """
             <audio autoplay>
-                <source src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-46437/zapsplat_multimedia_game_sound_collect_coin_002_47384.mp3" type="audio/mp3">
+                <source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav" type="audio/wav">
                 Your browser does not support the audio element.
             </audio>
             """,
@@ -40,7 +40,7 @@ if st.button("Check Answer"):
         st.markdown(
             """
             <audio autoplay>
-                <source src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-46437/zapsplat_multimedia_game_sound_collect_coin_002_47384.mp3" type="audio/mp3">
+                <source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav" type="audio/wav">
                 Your browser does not support the audio element.
             </audio>
             """,
@@ -51,9 +51,8 @@ if st.button("Check Answer"):
         st.markdown(
             """
             <audio autoplay>
-                <source src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-46437/zapsplat_multimedia_game_sound_wrong_buzzer_001_47535.mp3" type="audio/mp3">
+                <source src="https://www2.cs.uic.edu/~i101/SoundFiles/ImperialMarch60.wav" type="audio/wav">
                 Your browser does not support the audio element.
             </audio>
             """,
             unsafe_allow_html=True
-        )
