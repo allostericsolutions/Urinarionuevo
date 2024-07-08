@@ -28,13 +28,10 @@ if st.button("Check Answer"):
         st.success("Correct! 🎉")
         st.markdown(
             """
-            <script>
-                function playSound(soundFile) {
-                    const audio = new Audio(soundFile);
-                    audio.play();
-                }
-                playSound("Abdominal Sonography Overview/winning-82808.mp3");
-            </script>
+            <audio autoplay>
+                <source src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-46437/zapsplat_multimedia_game_sound_collect_coin_002_47384.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
             """,
             unsafe_allow_html=True
         )
@@ -42,13 +39,10 @@ if st.button("Check Answer"):
         st.success("Correct! 🎉")
         st.markdown(
             """
-            <script>
-                function playSound(soundFile) {
-                    const audio = new Audio(soundFile);
-                    audio.play();
-                }
-                playSound("Abdominal Sonography Overview/winning-82808.mp3");
-            </script>
+            <audio autoplay>
+                <source src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-46437/zapsplat_multimedia_game_sound_collect_coin_002_47384.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
             """,
             unsafe_allow_html=True
         )
@@ -56,13 +50,10 @@ if st.button("Check Answer"):
         st.error("Incorrect. Try again! ❌")
         st.markdown(
             """
-            <script>
-                function playSound(soundFile) {
-                    const audio = new Audio(soundFile);
-                    audio.play();
-                }
-                playSound("Abdominal Sonography Overview/game-over-arcade-6435.mp3");
-            </script>
+            <audio autoplay>
+                <source src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-46437/zapsplat_multimedia_game_sound_wrong_buzzer_001_47535.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
             """,
             unsafe_allow_html=True
         )
