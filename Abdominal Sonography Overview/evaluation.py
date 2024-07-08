@@ -28,10 +28,13 @@ if st.button("Check Answer"):
         st.success("Correct! 🎉")
         st.markdown(
             """
-            <audio autoplay>
-                <source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
+            <script>
+                function playSound(soundFile) {
+                    const audio = new Audio(soundFile);
+                    audio.play();
+                }
+                playSound("Abdominal Sonography Overview/winning-82808.mp3");
+            </script>
             """,
             unsafe_allow_html=True
         )
@@ -39,10 +42,13 @@ if st.button("Check Answer"):
         st.success("Correct! 🎉")
         st.markdown(
             """
-            <audio autoplay>
-                <source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
+            <script>
+                function playSound(soundFile) {
+                    const audio = new Audio(soundFile);
+                    audio.play();
+                }
+                playSound("Abdominal Sonography Overview/winning-82808.mp3");
+            </script>
             """,
             unsafe_allow_html=True
         )
@@ -50,9 +56,13 @@ if st.button("Check Answer"):
         st.error("Incorrect. Try again! ❌")
         st.markdown(
             """
-            <audio autoplay>
-                <source src="https://www2.cs.uic.edu/~i101/SoundFiles/ImperialMarch60.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
+            <script>
+                function playSound(soundFile) {
+                    const audio = new Audio(soundFile);
+                    audio.play();
+                }
+                playSound("Abdominal Sonography Overview/game-over-arcade-6435.mp3");
+            </script>
             """,
             unsafe_allow_html=True
+        )
