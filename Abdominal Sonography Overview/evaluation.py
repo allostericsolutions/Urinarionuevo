@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.title("Peritoneal vs. Retroperitoneal Organs")
 
@@ -16,53 +17,37 @@ retroperitoneales = [
 # Combine lists for the selectbox
 all_organs = peritoneales + retroperitoneales
 
-# Selectbox for the organ
-selected_organ = st.selectbox("Select an organ:", all_organs)
+# Initialize variables for scoring
+score = 0
+total_questions = len(all_organs)
+questions_answered = 0
+scores = []  # List to store scores after each question
 
-# Selectbox for the location
-location = st.selectbox("Where is this organ located?", ["Peritoneal", "Retroperitoneal"])
+# Loop through each organ 
+for i in range(total_questions):
+    # Selectbox for the organ
+    selected_organ = st.selectbox(f"Select organ {i+1}:", all_organs)
 
-# Check the answer
-if st.button("Check Answer"):
-    if selected_organ in peritoneales and location == "Peritoneal":
-        st.success("Correct! 🎉")
-        st.markdown(
-            """
-            <script>
-                function playSound(soundFile) {
-                    const audio = new Audio(soundFile);
-                    audio.play();
-                }
-                playSound("Abdominal Sonography Overview/winning-82808.mp3");
-            </script>
-            """,
-            unsafe_allow_html=True
-        )
-    elif selected_organ in retroperitoneales and location == "Retroperitoneal":
-        st.success("Correct! 🎉")
-        st.markdown(
-            """
-            <script>
-                function playSound(soundFile) {
-                    const audio = new Audio(soundFile);
-                    audio.play();
-                }
-                playSound("Abdominal Sonography Overview/winning-82808.mp3");
-            </script>
-            """,
-            unsafe_allow_html=True
-        )
-    else:
-        st.error("Incorrect. Try again! ❌")
-        st.markdown(
-            """
-            <script>
-                function playSound(soundFile) {
-                    const audio = new Audio(soundFile);
-                    audio.play();
-                }
-                playSound("Abdominal Sonography Overview/game-over-arcade-6435.mp3");
-            </script>
-            """,
-            unsafe_allow_html=True
-        )
+    # Selectbox for the location
+    location = st.selectbox(f"Where is {selected_organ} located?", ["Peritoneal", "Retroperitoneal"])
+
+    # Check the answer
+    if st.button(f"Check Answer {i+1}"):
+        if (selected_organ in peritoneales and location == "Peritoneal") or (selected_organ in retroperitoneales and location == "Retroperitoneal"):
+            score += 1
+            st.success("Correct! 🎉")
+            scores.append(score)  # Update the scores list
+            st.line_chart(pd.DataFrame({"Score": scores}))  # Update line chart
+        else:
+            st.error("Incorrect. Try again! ❌")
+            scores.append(score)  # Update the scores list
+            st.line_chart(pd.DataFrame({"Score": scores}))  # Update line chart
+        questions_answered += 1
+
+        # Check if all questions answered
+        if questions_answered == total_questions:
+            st.write(f"You answered {score} out of {total_questions} questions correctly!")
+            if score == total_questions:
+                st.success("Congratulations! You aced the quiz! 🎉")
+            else:
+                st.info("Keep practicing! You can do it!")
