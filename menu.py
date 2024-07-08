@@ -95,5 +95,5 @@ elif subtema == "The Musculoskeletal Imaging, Breast, and Superficial Structures
 
 st.write("## Evaluation Mode")
 
-# Ejecuta el módulo de evaluación
-st.run_the_script(path="evaluacion.py")
+# Ejecuta el módulo de "Abdominal Sonography Overview"
+  exec(open('Abdominal Sonography Overview/evaluation.py').read())
