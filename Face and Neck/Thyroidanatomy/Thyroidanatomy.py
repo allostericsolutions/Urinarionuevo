@@ -1,5 +1,4 @@
-# File: Face and Neck/Thyroidanatomy/Thyroidanatomy.py
-import streamlit as st
+mport streamlit as st
 
 # Define the content of the flash card
 title = "Vascular Anatomy of the Thyroid Gland and Neck"
@@ -25,23 +24,24 @@ answer = """
 The common carotid artery is the main medial vessel, branching into internal and external carotid arteries. The superior thyroid artery branches from the external carotid, while the inferior thyroid artery comes from the thyrocervical trunk of the subclavian artery. Corresponding thyroid veins drain into the internal jugular veins, which are situated superiorly and laterally to the common carotid arteries.
 """
 
-# Paths to the images within 'Face and Neck/imagenes'
-image_paths = [
-    "Face and Neck/imagenes/Lateral to the thyoroid.png",
-    "Face and Neck/imagenes/drenaje venoso tiroides.png",
-    "Face and Neck/imagenes/vasculatura toriodes.png",
-    "Face and Neck/imagenes/medial thyoroid.png",
-    "Face and Neck/imagenes/mosto common variant.png"
+# Image details
+image_details = [
+    {"path": "Face and Neck/imagenes/Lateral to the thyoroid.png", "description": "Lateral view of the thyroid"},
+    {"path": "Face and Neck/imagenes/drenaje venoso tiroides .png", "description": "Venous drainage of the thyroid"},
+    {"path": "Face and Neck/imagenes/vasculatura toriodes.png", "description": "Thyroid vasculature"},
+    {"path": "Face and Neck/imagenes/medial thyoroid.png", "description": "Medial view of the thyroid"},
+    {"path": "Face and Neck/imagenes/mosto common variant .png", "description": "Most common variant of thyroid anatomy"}
 ]
 
 # Create the flash card
-st.markdown(f"### {title}")
-st.markdown(f"**Question:** {question}")
-st.markdown(answer)
+with st.expander(title, expanded=False):
+    st.markdown(f"**Question:** {question}")
+    st.markdown(answer)
 
-# Display the images if they exist
-for image_path in image_paths:
-    try:
-        st.image(image_path, use_column_width=True)
-    except Exception as e:
-        st.warning(f"Image '{image_path}' not found. Please check the file path. Error: {e}")
+    # Display the images with descriptions if they exist
+    for image_detail in image_details:
+        try:
+            st.markdown(f"**{image_detail['description']}**")
+            st.image(image_detail["path"], use_column_width=True)
+        except Exception as e:
+            st.warning(f"Image '{image_detail['path']}' not found. Please check the file path. Error: {e}")
