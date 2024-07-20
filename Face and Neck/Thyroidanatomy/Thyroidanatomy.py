@@ -28,8 +28,8 @@ answer = """
 The common carotid artery is the main medial vessel, branching into internal and external carotid arteries. The superior thyroid artery branches from the external carotid, while the inferior thyroid artery comes from the thyrocervical trunk of the subclavian artery. Corresponding thyroid veins drain into the internal jugular veins, which are situated superiorly and laterally to the common carotid arteries.
 """
 
-# Ruta a la imagen dentro de la carpeta 'Face and Neck/Thyroid_Anatomy/images'
-image_path = "Face and Neck/Thyroid_Anatomy/images/thyroid_image1.png"
+# Ruta a la imagen dentro de la carpeta 'Face and Neck/Thyroidanatomy/imagenes'
+image_path = "Face and Neck/Thyroidanatomy/imagenes/thyroid_image1.png"
 
 # Crear la flash card con expanders
 with st.expander(style_title(title) + " (Q&A)", expanded=True):
