@@ -1,4 +1,3 @@
-# File: menu.py
 import streamlit as st
 
 st.title("Abdomen ARDMS")
