@@ -15,9 +15,6 @@ with st.expander("Eponyms in Thyroid and Neck Pathology:", expanded=st.session_s
     st.markdown(style_title("Sjögren Syndrome:") + " An autoimmune disease that affects all glands that produce moisture, leading to dysfunction of the salivary glands and severe dryness of the eyes, nose, skin, and mouth.", unsafe_allow_html=True)
     st.markdown(style_title("Stensen Duct:") + " The main duct of the parotid gland.", unsafe_allow_html=True)
     st.markdown(style_title("Wharton Duct:") + " The duct that drains the submandibular gland.", unsafe_allow_html=True)
-
-# Expandable and collapsible section
-with st.expander("Morphological Terms in Thyroid and Neck Pathology:", expanded=st.session_state.mostrar_eponimos):
     st.markdown(style_title("Cold Nodules:") + " The hypofunctioning thyroid nodules seen on a nuclear medicine study that have malignant potential.", unsafe_allow_html=True)
     st.markdown(style_title("Cystic Hygroma:") + " May also refer to a lymphangioma.", unsafe_allow_html=True)
     st.markdown(style_title("Exophthalmos:") + " Bulging eyes.", unsafe_allow_html=True)
