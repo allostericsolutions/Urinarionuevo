@@ -85,7 +85,7 @@ elif subtema == "The Face and Neck":
      # Ejecuta el módulo de "The Face and Neck"
     exec(open('Face and Neck/eponyms.py').read())
     # Ejecuta el módulo de "The Face and Neck"
-    exec(open('Face and Neck/Thyroid.py')
+    exec(open('Face and Neck/Thyroid.py').read())
 elif subtema == "The Male Pelvis":
     st.write("#### The Male Pelvis")
     # Agrega aquí el contenido de "The Male Pelvis"
