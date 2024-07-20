@@ -42,7 +42,7 @@ elif subtema == "The Liver":
     exec(open('The liver/Tumors.py').read())
 elif subtema == "The Gallbladder":
     st.write("#### The Gallbladder")
-    # Ejecuta el módulo de "The Gallblader"
+    # Ejecuta el módulo de "The Gallbladder"
     exec(open('The Gallbladder/signs.py').read())
 elif subtema == "The Bile Ducts":
     st.write("#### The Bile Ducts")
@@ -82,10 +82,12 @@ elif subtema == "Noncardiac Chest and Retroperitoneum":
     # (textos, imágenes, videos, etc.)
 elif subtema == "The Face and Neck":
     st.write("#### The Face and Neck")
-     # Ejecuta el módulo de "The Face and Neck"
-    exec(open('Face and Neck/eponyms.py').read())
     # Ejecuta el módulo de "The Face and Neck"
-    exec(open('Face and Neck/Thyroid.py').read())
+    exec(open('Face and Neck/eponyms.py').read())
+elif subtema == "Thyroid Anatomy":
+    st.write("#### Thyroid Anatomy")
+    # Ejecuta el módulo de "Thyroid Anatomy"
+    exec(open('Face and Neck/Thyroidanatomy/Thyroidanatomy.py').read())
 elif subtema == "The Male Pelvis":
     st.write("#### The Male Pelvis")
     # Agrega aquí el contenido de "The Male Pelvis"
