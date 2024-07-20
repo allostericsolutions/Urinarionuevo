@@ -1,4 +1,4 @@
-mport streamlit as st
+import streamlit as st
 
 # Define the content of the flash card
 title = "Vascular Anatomy of the Thyroid Gland and Neck"
