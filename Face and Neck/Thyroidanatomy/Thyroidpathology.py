@@ -29,7 +29,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Diffusely heterogeneous echotexture
     - Multiple nodules with cystic and solid components
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr1.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Normal thyroid: Thyroid lobe in longitudinal section, homogeneous parenchyma, normal echogenicity, normal shape and size.") # Image URL for Goiter
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr1.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Goiter: Enlarged thyroid gland with heterogeneous echotexture.") # Image URL for Goiter
 
     # Graves Disease
     st.markdown(style_title("Graves Disease:") + " ", unsafe_allow_html=True)
@@ -198,91 +198,41 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Can be solid (isoechoic, hypoechoic, or hyperechoic), cystic (anechoic or hypoechoic), or mixed.
         - Ultrasound should describe location, size, number, echogenicity, echotexture, borders, calcifications, and vascularization.
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr1.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Normal thyroid: Thyroid lobe in longitudinal section, homogeneous parenchyma, normal echogenicity, normal shape and size.") # Image URL for Normal thyroid
 
-    # Signos Ecográficos de Malignidad de los Nódulos Tiroideos
-    st.markdown(style_title("Sonographic Signs of Malignancy in Thyroid Nodules") + " ", unsafe_allow_html=True)
-    st.markdown("""
-    - **Suspicious features of malignancy:**
-        - Solid nodule with marked hypoechogenicity
-        - Taller than wide
-        - Irregular, microlobulated, or spiculated borders
-        - Microcalcifications
-    - **Other features:**
-        - Heterogeneity
-        - Solid nature
-        - Poorly defined contours
-    - **Puncture recommendations:**
-        - Solid nodules larger than 10 mm in diameter
-        - Solid-cystic nodules larger than 20 mm
-    - **The more malignancy criteria present, the higher the probability of malignancy.**
-    """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr7.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Malignant Thyroid Nodules: Solid nodule with marked hypoechogenicity, taller-than-wide shape, and microcalcifications.") # Image URL for Malignant Thyroid Nodules
+    st.markdown("## Imágenes:")
 
-    # PAAF Bajo Ecografía
-    st.markdown(style_title("Fine-Needle Aspiration Biopsy (FNAB) under Ultrasound Guidance") + " ", unsafe_allow_html=True)
-    st.markdown("""
-    - Fine-needle aspiration biopsy (FNAB) is performed under ultrasound guidance.
-    - Real-time ultrasound guidance improves sample quality and reduces risks.
-    - It is important to check for suspicious lymph nodes.
-    """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr8.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="FNAB under Ultrasound Guidance.") # Image URL for PAAF under Ultrasound Guidance
+    st.markdown("**Figura 1:** Normal thyroid: Thyroid lobe in longitudinal section, homogeneous parenchyma, normal echogenicity, normal shape and size.")
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr1.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG")
 
-    # Ecografía Cervical de Etapaficación Preoperatoria
-    st.markdown(style_title("Preoperative Staging Cervical Ultrasound") + " ", unsafe_allow_html=True)
-    st.markdown("""
-    - **Ultrasound is a valuable tool for pre-operative staging of thyroid cancer.**
-    - It provides information about the size of the thyroid, location of the malignancy, extent of tumor invasion, suspicious lymph nodes, and other cervical masses.
-    - **Doppler studies:** Help confirm tumor thrombosis in the internal jugular veins.
-    """, unsafe_allow_html=True)
+    st.markdown("**Figura 2:** Normal thyroid: Thyroid in a transverse section. The isthmus of normal thickness measures 2.3mm anteroposterior diameter.")
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr2.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG")
 
-    # Control Post Tiroidectomía
-    st.markdown(style_title("Post-Thyroidectomy Monitoring") + " ", unsafe_allow_html=True)
-    st.markdown("""
-    - **Post-operative monitoring:**
-        - Ultrasound at 6 months or 1 year unless immediate or recent post-operative complications are suspected.
-    - **Examination areas:**
-        - Thyroid projection site
-        - Carotid compartments
-        - Submandibular regions
-        - Parotid tail
-    - **Looking for:**
-        - Residual glandular tissue
-        - Recurrence
-        - Calcified granulomas in the thyroid bed
-    - **Anechoic or hypoechoic nodules in the thyroid bed:** May indicate recurrence.
-    - **Suspicious lymph nodes:** Puncture and measure thyroglobulin and anti-thyroglobulin antibodies.
-    - **Post-thyroidectomy patients without signs of recurrence:** Regular monitoring with increasing intervals.
-    """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr9.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Post-Operative Thyroid Bed.") # Image URL for Post-Operative Thyroid Bed
+    st.markdown("**Figura 3:**  Normal thyroid: Left photo: transverse section: the pyramidal lobe in right paramedian location (arrowhead). Right photo: longitudinal section: the left pre-laryngeal pyramidal lobe imperceptibly continues with the isthmus (c: cranial; i: isthmus).")
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr3.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG")
 
-    # Bocio Difuso
-    st.markdown(style_title("Diffuse Goiter") + " ", unsafe_allow_html=True)
-    st.markdown("""
-    - **Diffuse goiter:** Usually due to non-neoplastic pathology (endemic goiter, Graves' disease, thyroiditis).
-    - **Ultrasound:** Sensitive but not specific for diagnosis.
-    - **Thyroid inflammation:** Typically manifests as parenchymal hypoechogenicity, homogeneous or heterogeneous, often with increased vascularization.
-    - **Pseudonodules:** May be present in chronic thyroiditis, frequently hyperechoic, homogeneous, partially delineated, with peripheral vascularization, without acoustic shadow or posterior reinforcement of sound. 
-    - **Lymphomatous involvement:** Presents as diffuse goiter, markedly hypoechoic, heterogeneous, hypervascular, often associated with pathological cervical lymph nodes. 
-    """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr10.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Chronic Thyroiditis: Pseudonodule.") # Image URL for Bocio Difuso
+    st.markdown("**Figura 4:**  Hemiagenesis of the left thyroid lobe: Patient without surgical history. There is no paratracheal left glandular parenchyma. In this case, the isthmus is present.")
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr4.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG")
 
-    # Ablación de Nódulos Tiroideos Benignos Bajo Guía Ecográfica
-    st.markdown(style_title("Ultrasound-Guided Ablation of Benign Thyroid Nodules") + " ", unsafe_allow_html=True)
-    st.markdown("""
-    - **Minimally invasive procedures:** Increasingly used for non-malignant thyroid conditions.
-    - **Cyst aspiration:** Not definitive treatment due to high recurrence rate.
-    - **Ethanol ablation:** Good results for recurrent cysts, but not frequently used.
-    - **Radiofrequency ablation:** Alternative for solid nodules, indicated for nodules with confirmed benignity, measuring up to 50 mm in diameter.
-    """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr11.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Radiofrequency Ablation of Benign Thyroid Nodule.") # Image URL for Ablación de Nódulos Tiroideos Benignos
+    st.markdown("**Figura 5:**  Goiter. A: Thyroid in a longitudinal section, globose increased in size, gently lobulated contours, hypoechoic parenchyma, heterogeneous, without images of nodules in its thickness. ")
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr5.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG")
 
-    # Perspectivas Futuras
-    st.markdown(style_title("Future Perspective") + " ", unsafe_allow_html=True)
-    st.markdown("""
-    - **Ultrasound remains a challenging but valuable tool.**
-    - **Minimally invasive treatments are increasingly used.**
-    - **Importance of training:** Ensure adequate training for professionals performing ultrasound examinations. 
-    """, unsafe_allow_html=True)
+    st.markdown("**Figura 5:**  B: Thyroid in a longitudinal section, globose increased in size, lobulated contours, hypoechoic, heterogeneous, with solid nodules of different sizes.")
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr6.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG")
 
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr12.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Radiofrequency Ablation of Benign Thyroid Nodule.") # Image URL for Ablación de Nódulos Tiroideos Benignos
+    st.markdown("**Figura 6:** Thyroid nodules. A: On the left, a solid thyroid nodule, isoechoic (same echogenicity as the rest of the lobe) and on the right, the image of a hypoechoic nodule (darker than the rest of the surrounding normal thyroid tissue), in this case with some thick calcifications (white images of eccentric location, upper right). ")
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr7.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG")
+
+    st.markdown("**Figura 6:**  B: Longitudinal ultrasound section of a thyroid nodule: solid, hyperechoic, well-defined, without calcifications.")
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr8.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG")
+
+    st.markdown("**Figura 6:**  C: Cystic thyroid nodule (anechoic): ultrasound passes through the liquid structure without generating echoes and immediately dorsal to the cyst there is an ultrasound reinforcement, due to greater availability of energy to emit more echoes.")
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr9.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG")
+
+    st.markdown("**Figura 6:**  D: Solid cystic thyroid nodule (or mixed), surrounded by a hypoechoic halo. The peripheral portion of the nodule is solid, isoechoic and the center is liquid (anechoic).")
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr10.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG")
+
+    st.markdown("**Figura 7:**  Thyroid nodules with sonographic characteristics of malignancy. A: Solid thyroid nodule, markedly hypoechoic, also presents peripheral microcalcifications (papillary Ca). ")
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr11.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG")
+
+    st.markdown("**Figura 7:**  B: Solid thyroid nodule higher than wide: anteroposterior diameter (height) greater than longitudinal diameter (width). (papillary Ca).")
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr12.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsE
