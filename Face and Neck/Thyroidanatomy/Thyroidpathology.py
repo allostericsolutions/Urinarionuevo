@@ -114,8 +114,8 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - “Cold” nodule (nuclear medicine finding)
     """)
 
-    # Generalidades
-    st.markdown(style_title("Generalidades:") + " ", unsafe_allow_html=True)
+    # General Considerations
+    st.markdown(style_title("General Considerations:") + " ", unsafe_allow_html=True)
     st.markdown("""
     - **Ultrasound is the most cost-effective imaging test for the thyroid.** 
     - **It is operator-dependent and uses equipment with high-resolution transducers and color Doppler.**
@@ -139,7 +139,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Supporting minimally invasive treatments
     """, unsafe_allow_html=True)
 
-    # Técnica Ecográfica
+    # Ultrasound Technique
     st.markdown(style_title("Ultrasound Technique") + " ", unsafe_allow_html=True)
     st.markdown("""
     - **Ultrasound probes:** Linear, 3.5 to 5 cm in length, with frequencies between 5 and 17 MHz.
@@ -156,7 +156,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Pyramidal lobe: Anteroposterior and transverse axes
     """, unsafe_allow_html=True)
 
-    # Indicaciones de la Ecografía Tiroidea
+    # Indications for Thyroid Ultrasound
     st.markdown(style_title("Indications for Thyroid Ultrasound") + " ", unsafe_allow_html=True)
     st.markdown("""
     - Goiter
@@ -171,7 +171,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Complementary examination for thyroid pathology detected in other cervical exams (Carotid Doppler, CT or MRI of the cervical spine, PET, etc.)
     """, unsafe_allow_html=True)
 
-    # El Tiroides Normal y Patológico
+    # Normal and Pathological Thyroid
     st.markdown(style_title("Normal and Pathological Thyroid") + " ", unsafe_allow_html=True)
     st.markdown("""
     - **Normal thyroid:**
@@ -193,7 +193,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Ultrasound should describe location, size, number, echogenicity, echotexture, borders, calcifications, and vascularization.
     """, unsafe_allow_html=True)
 
-    # Signos Ecográficos de Malignidad de los Nódulos Tiroideos
+    # Sonographic Signs of Malignancy in Thyroid Nodules
     st.markdown(style_title("Sonographic Signs of Malignancy in Thyroid Nodules") + " ", unsafe_allow_html=True)
     st.markdown("""
     - **Suspicious features of malignancy:**
@@ -211,7 +211,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - **The more malignancy criteria present, the higher the probability of malignancy.**
     """, unsafe_allow_html=True)
 
-    # PAAF Bajo Ecografía
+    # Fine-Needle Aspiration Biopsy (FNAB) under Ultrasound Guidance
     st.markdown(style_title("Fine-Needle Aspiration Biopsy (FNAB) under Ultrasound Guidance") + " ", unsafe_allow_html=True)
     st.markdown("""
     - Fine-needle aspiration biopsy (FNAB) is performed under ultrasound guidance.
@@ -219,7 +219,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - It is important to check for suspicious lymph nodes.
     """, unsafe_allow_html=True)
 
-    # Ecografía Cervical de Etapaficación Preoperatoria
+    # Preoperative Staging Cervical Ultrasound
     st.markdown(style_title("Preoperative Staging Cervical Ultrasound") + " ", unsafe_allow_html=True)
     st.markdown("""
     - **Ultrasound is a valuable tool for pre-operative staging of thyroid cancer.**
@@ -227,7 +227,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - **Doppler studies:** Help confirm tumor thrombosis in the internal jugular veins.
     """, unsafe_allow_html=True)
 
-    # Control Post Tiroidectomía
+    # Post-Thyroidectomy Monitoring
     st.markdown(style_title("Post-Thyroidectomy Monitoring") + " ", unsafe_allow_html=True)
     st.markdown("""
     - **Post-operative monitoring:**
@@ -246,7 +246,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - **Post-thyroidectomy patients without signs of recurrence:** Regular monitoring with increasing intervals.
     """, unsafe_allow_html=True)
 
-    # Bocio Difuso
+    # Diffuse Goiter
     st.markdown(style_title("Diffuse Goiter") + " ", unsafe_allow_html=True)
     st.markdown("""
     - **Diffuse goiter:** Usually due to non-neoplastic pathology (endemic goiter, Graves' disease, thyroiditis).
@@ -256,7 +256,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - **Lymphomatous involvement:** Presents as diffuse goiter, markedly hypoechoic, heterogeneous, hypervascular, often associated with pathological cervical lymph nodes. 
     """, unsafe_allow_html=True)
 
-    # Ablación de Nódulos Tiroideos Benignos Bajo Guía Ecográfica
+    # Ultrasound-Guided Ablation of Benign Thyroid Nodules
     st.markdown(style_title("Ultrasound-Guided Ablation of Benign Thyroid Nodules") + " ", unsafe_allow_html=True)
     st.markdown("""
     - **Minimally invasive procedures:** Increasingly used for non-malignant thyroid conditions.
@@ -265,7 +265,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - **Radiofrequency ablation:** Alternative for solid nodules, indicated for nodules with confirmed benignity, measuring up to 50 mm in diameter.
     """, unsafe_allow_html=True)
 
-    # Perspectivas Futuras
+    # Future Perspective
     st.markdown(style_title("Future Perspective") + " ", unsafe_allow_html=True)
     st.markdown("""
     - **Ultrasound remains a challenging but valuable tool.**
