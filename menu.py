@@ -89,7 +89,8 @@ if st.session_state.pagina_actual == "Content":
     elif subtema == "The Musculoskeletal Imaging, Breast, and Superficial Structures":
         st.write("#### The Musculoskeletal Imaging, Breast, and Superficial Structures")
         # Agrega aquí el contenido de "The Musculoskeletal Imaging, Breast, and Superficial Structures"
-    
-elif st.session_state.pagina_actual == "Evaluation":
+
+# Bloque para la sección "Evaluation" fuera del "Content"
+elif st.session_state.pagina_actual == "Evaluation": 
     st.write("## Evaluation Mode")
     exec(open('Abdominal Sonography Overview/evaluation.py').read())
