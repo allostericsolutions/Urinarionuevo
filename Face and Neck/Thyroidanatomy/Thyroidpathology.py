@@ -29,7 +29,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Diffusely heterogeneous echotexture
     - Multiple nodules with cystic and solid components
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr1.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Goiter: Enlarged thyroid gland with heterogeneous echotexture.")
+    st.image("https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-ecografia-tiroides-S071686401830083X#imagen-2", caption="Goiter: Enlarged thyroid gland with heterogeneous echotexture.") # Image URL for Goiter
 
     # Graves Disease
     st.markdown(style_title("Graves Disease:") + " ", unsafe_allow_html=True)
@@ -46,7 +46,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Oligomenorrhea (infrequent menstrual periods)
     - Pretibial myxedema
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr2.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Graves Disease: Enlarged gland with heterogeneous echotexture.")
+    st.image("https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-ecografia-tiroides-S071686401830083X#imagen-3", caption="Graves Disease: Enlarged gland with heterogeneous echotexture.") # Image URL for Graves Disease
 
     st.markdown("#### Sonographic Findings")
     st.markdown("""
@@ -67,7 +67,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Menorrhagia (heavy menstrual bleeding)
     - Pallor (pale skin)
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr3.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Hashimoto Thyroiditis: Mild enlargement of the thyroid gland with heterogeneous echotexture.")
+    st.image("https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-ecografia-tiroides-S071686401830083X#imagen-4", caption="Hashimoto Thyroiditis: Mild enlargement of the thyroid gland with heterogeneous echotexture.") # Image URL for Hashimoto Thyroiditis
 
     st.markdown("#### Sonographic Findings")
     st.markdown("""
@@ -87,7 +87,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Nodular hyperplasia: The most common cause of thyroid nodules.
     - Hyperplastic nodules: Often multiple and with varying appearances.
     """)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr4.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Benign Thyroid Nodules: Sonographic features include cystic components, hyperechoic mass, and wider-than-tall shape.")
+    st.image("https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-ecografia-tiroides-S071686401830083X#imagen-5", caption="Benign Thyroid Nodules: Sonographic features include cystic components, hyperechoic mass, and wider-than-tall shape.") # Image URL for Benign Thyroid Nodules
 
     st.markdown("#### Sonographic Features")
     st.markdown("""
@@ -117,10 +117,11 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Enlargement of the cervical lymph nodes (metastasis)
     - “Cold” nodule (nuclear medicine finding)
     """)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr5.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Malignant Thyroid Nodules: Sonographic features include hypoechoic mass, taller-than-wide shape, and microcalcifications.")
+    st.image("https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-ecografia-tiroides-S071686401830083X#imagen-6", caption="Malignant Thyroid Nodules: Sonographic features include hypoechoic mass, taller-than-wide shape, and microcalcifications.") # Image URL for Malignant Thyroid Nodules
 
-    # General Aspects
-    st.markdown(style_title("General Aspects:") + " ", unsafe_allow_html=True)
+
+    # Generalidades
+    st.markdown(style_title("Generalidades:") + " ", unsafe_allow_html=True)
     st.markdown("""
     - **Ultrasound is the most cost-effective imaging test for the thyroid.** 
     - **It is operator-dependent and uses equipment with high-resolution transducers and color Doppler.**
@@ -134,7 +135,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Taller than wide
         - Lobulated or spiculated edges
         - Presence of microcalcifications
-    - **Ultrasound is essential for:**
+    - **Ultrasound is essential in:**
         - Detecting nodules
         - Obtaining samples for cytopathological study
         - Pre-operative staging
@@ -144,12 +145,12 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Supporting minimally invasive treatments
     """, unsafe_allow_html=True)
 
-    # Sonographic Technique
-    st.markdown(style_title("SONOGRAPHIC TECHNIQUE") + " ", unsafe_allow_html=True)
+    # Técnica Ecográfica
+    st.markdown(style_title("TÉCNICA ECOGRÁFICA") + " ", unsafe_allow_html=True)
     st.markdown("""
     - **Ultrasound probes:** Linear, 3.5 to 5 cm in length, with frequencies between 5 and 17 MHz.
     - **Patient position:** Supine with neck hyperextension (adjust position if needed).
-    - **Gel is used:** Enables transducer movement and improves image quality.
+    - **Gel is used:** Allows transducer movement and improves image quality.
     - **Compression is not necessary:** It can worsen image quality.
     - **Ultrasound provides:**
         - General morphology: Presence, position, size, shape, contours, borders
@@ -161,8 +162,8 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Pyramidal lobe: Anteroposterior and transverse axes
     """, unsafe_allow_html=True)
 
-    # Indications for Thyroid Ultrasound
-    st.markdown(style_title("INDICATIONS FOR THYROID ULTRASOUND") + " ", unsafe_allow_html=True)
+    # Indicaciones de la Ecografía Tiroidea
+    st.markdown(style_title("INDICACIONES DE LA ECOGRAFÍA TIROIDEA") + " ", unsafe_allow_html=True)
     st.markdown("""
     - Goiter
     - Palpable or visible nodule
@@ -176,8 +177,8 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Complementary examination for thyroid pathology detected in other cervical exams (Carotid Doppler, CT or MRI of the cervical spine, PET, etc.)
     """, unsafe_allow_html=True)
 
-    # Normal and Pathological Thyroid
-    st.markdown(style_title("NORMAL AND PATHOLOGICAL THYROID") + " ", unsafe_allow_html=True)
+    # El Tiroides Normal y Patológico
+    st.markdown(style_title("EL TIROIDES NORMAL Y PATOLÓGICO") + " ", unsafe_allow_html=True)
     st.markdown("""
     - **Normal thyroid:**
         - Shape: H-shaped (butterfly)
@@ -197,10 +198,10 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Can be solid (isoechoic, hypoechoic, or hyperechoic), cystic (anechoic or hypoechoic), or mixed.
         - Ultrasound should describe location, size, number, echogenicity, echotexture, borders, calcifications, and vascularization.
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr6.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Normal thyroid: H-shaped with lobes, isthmus, and pyramidal lobe.")
+    st.image("https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-ecografia-tiroides-S071686401830083X#imagen-1", caption="Normal thyroid: H-shaped with lobes, isthmus, and pyramidal lobe.") # Image URL for Normal thyroid
 
-    # Sonographic Signs of Malignancy of Thyroid Nodules
-    st.markdown(style_title("SONOGRAPHIC SIGNS OF MALIGNANCY OF THYROID NODULES") + " ", unsafe_allow_html=True)
+    # Signos Ecográficos de Malignidad de los Nódulos Tiroideos
+    st.markdown(style_title("SIGNOS ECOGRÁFICOS DE MALIGNIDAD DE LOS NÓDULOS TIROIDEOS") + " ", unsafe_allow_html=True)
     st.markdown("""
     - **Suspicious features of malignancy:**
         - Solid nodule with marked hypoechogenicity
@@ -216,4 +217,70 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Solid-cystic nodules larger than 20 mm
     - **The more malignancy criteria present, the higher the probability of malignancy.**
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_20181023060
+    st.image("https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-ecografia-tiroides-S071686401830083X#imagen-7", caption="Malignant Thyroid Nodules: Solid nodule with marked hypoechogenicity, taller-than-wide shape, and microcalcifications.") # Image URL for Malignant Thyroid Nodules
+
+    # PAAF Bajo Ecografía
+    st.markdown(style_title("PAAF BAJO ECOGRAFÍA") + " ", unsafe_allow_html=True)
+    st.markdown("""
+    - Fine-needle aspiration biopsy (FNAB) is performed under ultrasound guidance.
+    - Real-time ultrasound guidance improves sample quality and reduces risks.
+    - It is important to check for suspicious lymph nodes.
+    """, unsafe_allow_html=True)
+    st.image("https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-ecografia-tiroides-S071686401830083X#imagen-8", caption="FNAB under Ultrasound Guidance.") # Image URL for PAAF under Ultrasound Guidance
+
+    # Ecografía Cervical de Etapaficación Preoperatoria
+    st.markdown(style_title("ECOGRAFÍA CERVICAL DE ETAPIFICACIÓN PREOPERATORIA") + " ", unsafe_allow_html=True)
+    st.markdown("""
+    - **Ultrasound is a valuable tool for pre-operative staging of thyroid cancer.**
+    - It provides information about the size of the thyroid, location of the malignancy, extent of tumor invasion, suspicious lymph nodes, and other cervical masses.
+    - **Doppler studies:** Help confirm tumor thrombosis in the internal jugular veins.
+    """, unsafe_allow_html=True)
+
+    # Control Post Tiroidectomía
+    st.markdown(style_title("CONTROL POST TIROIDECTOMÍA") + " ", unsafe_allow_html=True)
+    st.markdown("""
+    - **Post-operative monitoring:**
+        - Ultrasound at 6 months or 1 year unless immediate or recent post-operative complications are suspected.
+    - **Examination areas:**
+        - Thyroid projection site
+        - Carotid compartments
+        - Submandibular regions
+        - Parotid tail
+    - **Looking for:**
+        - Residual glandular tissue
+        - Recurrence
+        - Calcified granulomas in the thyroid bed
+    - **Anechoic or hypoechoic nodules in the thyroid bed:** May indicate recurrence.
+    - **Suspicious lymph nodes:** Puncture and measure thyroglobulin and anti-thyroglobulin antibodies.
+    - **Post-thyroidectomy patients without signs of recurrence:** Regular monitoring with increasing intervals.
+    """, unsafe_allow_html=True)
+    st.image("https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-ecografia-tiroides-S071686401830083X#imagen-9", caption="Post-Operative Thyroid Bed.") # Image URL for Post-Operative Thyroid Bed
+
+    # Bocio Difuso
+    st.markdown(style_title("BOCIO DIFUSO") + " ", unsafe_allow_html=True)
+    st.markdown("""
+    - **Diffuse goiter:** Usually due to non-neoplastic pathology (endemic goiter, Graves' disease, thyroiditis).
+    - **Ultrasound:** Sensitive but not specific for diagnosis.
+    - **Thyroid inflammation:** Typically manifests as parenchymal hypoechogenicity, homogeneous or heterogeneous, often with increased vascularization.
+    - **Pseudonodules:** May be present in chronic thyroiditis, frequently hyperechoic, homogeneous, partially delineated, with peripheral vascularization, without acoustic shadow or posterior reinforcement of sound. 
+    - **Lymphomatous involvement:** Presents as diffuse goiter, markedly hypoechoic, heterogeneous, hypervascular, often associated with pathological cervical lymph nodes. 
+    """, unsafe_allow_html=True)
+    st.image("https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-ecografia-tiroides-S071686401830083X#imagen-10", caption="Chronic Thyroiditis: Pseudonodule.") # Image URL for Bocio Difuso
+
+    # Ablación de Nódulos Tiroideos Benignos Bajo Guía Ecográfica
+    st.markdown(style_title("ABLACIÓN DE NÓDULOS TIROIDEOS BENIGNOS BAJO GUÍA ECOGRÁFICA") + " ", unsafe_allow_html=True)
+    st.markdown("""
+    - **Minimally invasive procedures:** Increasingly used for non-malignant thyroid conditions.
+    - **Cyst aspiration:** Not definitive treatment due to high recurrence rate.
+    - **Ethanol ablation:** Good results for recurrent cysts, but not frequently used.
+    - **Radiofrequency ablation:** Alternative for solid nodules, indicated for nodules with confirmed benignity, measuring up to 50 mm in diameter.
+    """, unsafe_allow_html=True)
+    st.image("https://www.elsevier.es/es-revista-revista-medica-clinica-las-condes-202-articulo-ecografia-tiroides-S071686401830083X#imagen-11", caption="Radiofrequency Ablation of Benign Thyroid Nodule.") # Image URL for Ablación de Nódulos Tiroideos Benignos
+
+    # Perspectivas Futuras
+    st.markdown(style_title("Future Perspective") + " ", unsafe_allow_html=True)
+    st.markdown("""
+    - **Ultrasound remains a challenging but valuable tool.**
+    - **Minimally invasive treatments are increasingly used.**
+    - **Importance of training:** Ensure adequate training for professionals performing ultrasound examinations. 
+    """, unsafe_allow_html=True)
