@@ -1,14 +1,13 @@
 import streamlit as st
 
-# Función para estilizar el título de las secciones
-def style_title(title):
-    return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
+# Define the content of the flash card
+title = "Clinical and Sonographic Findings of Thyroid Conditions"
 
-# Crear la categoría principal
-with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expanded=False):
+# Create expandable sections
+with st.expander(title, expanded=False):
     
-    # Findings of a Goiter
-    with st.expander(style_title("Goiter"), expanded=False):
+    # Goiter
+    with st.expander("Goiter", expanded=False):
         st.markdown("#### Clinical Findings")
         st.markdown("""
         - Palpable (and possibly visually) enlarged thyroid gland
@@ -26,8 +25,8 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Multiple nodules with cystic and solid components
         """, unsafe_allow_html=True)
     
-    # Findings of Graves Disease
-    with st.expander(style_title("Graves Disease"), expanded=False):
+    # Graves Disease
+    with st.expander("Graves Disease", expanded=False):
         st.markdown("#### Clinical Findings")
         st.markdown("""
         - Bulging eyes (exophthalmos)
@@ -49,8 +48,8 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Thyroid inferno (increased blood flow on Doppler)
         """, unsafe_allow_html=True)
     
-    # Findings of Hashimoto Thyroiditis
-    with st.expander(style_title("Hashimoto Thyroiditis"), expanded=False):
+    # Hashimoto Thyroiditis
+    with st.expander("Hashimoto Thyroiditis", expanded=False):
         st.markdown("#### Clinical Findings")
         st.markdown("""
         - Depression
@@ -71,7 +70,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         """, unsafe_allow_html=True)
 
     # Benign Thyroid Nodules
-    with st.expander(style_title("Benign Thyroid Nodules"), expanded=False):
+    with st.expander("Benign Thyroid Nodules", expanded=False):
         st.markdown("Thyroid nodules are exceedingly common, with up to 68% of all adults having sonographically identifiable thyroid nodules.")
         
         st.markdown("#### Types of Benign Nodules")
@@ -93,7 +92,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         """)
 
     # Malignant Thyroid Nodules
-    with st.expander(style_title("Malignant Thyroid Nodules"), expanded=False):
+    with st.expander("Malignant Thyroid Nodules", expanded=False):
         st.markdown("Papillary carcinoma is the most common form of thyroid cancer, though other forms include follicular carcinoma, medullary carcinoma, anaplastic carcinoma, lymphoma, and metastases.")
         
         st.markdown("#### Sonographic Features of Malignant Nodules")
@@ -109,7 +108,3 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Enlargement of the cervical lymph nodes (metastasis)
         - “Cold” nodule (nuclear medicine finding)
         """)
-
-# Ejecutar la aplicación Streamlit
-if __name__ == "__main__":
-    st.run()
