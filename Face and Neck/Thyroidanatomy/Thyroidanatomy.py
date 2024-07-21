@@ -1,40 +1,30 @@
 import streamlit as st
 
-# Definir el contenido de la tarjeta de aprendizaje
+# Define the content of the flash card
 title = "Vascular Anatomy of the Thyroid Gland and Neck"
 question = "What are the primary vascular structures near the thyroid gland and their branches?"
 answer = """
-<p style="color: white;">
-<b><u>Primary Vascular Structures:</u></b>
-<ul>
-    <li><b>Common Carotid Artery:</b> The most medial vessel, located lateral to the thyroid gland.</li>
-    <li><b>Internal Jugular Vein:</b> Also located lateral to the thyroid gland.</li>
-</ul>
+**Primary Vascular Structures:**
+- **Common Carotid Artery:** The most medial vessel, located lateral to the thyroid gland.
+- **Internal Jugular Vein:** Also located lateral to the thyroid gland.
 
-<b><u>Branches of the Common Carotid Artery:</u></b>
-<ul>
-    <li><b>Internal Carotid Artery:</b> Branches from the common carotid arteries above the thyroid gland.</li>
-    <li><b>External Carotid Artery:</b> Branches from the common carotid arteries above the thyroid gland.</li>
-</ul>
+**Branches of the Common Carotid Artery:**
+- **Internal Carotid Artery:** Branches from the common carotid arteries above the thyroid gland.
+- **External Carotid Artery:** Branches from the common carotid arteries above the thyroid gland.
 
-<b><u>Thyroid Arteries:</u></b>
-<ul>
-    <li><b>Superior Thyroid Artery:</b> The first branch of the external carotid artery.</li>
-    <li><b>Inferior Thyroid Artery:</b> A branch of the thyrocervical trunk of the subclavian artery.</li>
-</ul>
+**Thyroid Arteries:**
+- **Superior Thyroid Artery:** The first branch of the external carotid artery.
+- **Inferior Thyroid Artery:** A branch of the thyrocervical trunk of the subclavian artery.
 
-<b><u>Thyroid Veins:</u></b>
-<ul>
-    <li>These veins drain into the internal jugular vein.</li>
-    <li>Jugular veins are positioned superior and lateral to the common carotid arteries.</li>
-</ul>
+**Thyroid Veins:**
+- These veins drain into the internal jugular vein.
+- Jugular veins are positioned superior and lateral to the common carotid arteries.
 
-<b><u>Summary:</u></b>
-<p>The common carotid artery is the main medial vessel, branching into internal and external carotid arteries. The superior thyroid artery branches from the external carotid, while the inferior thyroid artery comes from the thyrocervical trunk of the subclavian artery. Corresponding thyroid veins drain into the internal jugular veins, which are situated superiorly and laterally to the common carotid arteries.</p>
-</p>
+**Summary:**
+The common carotid artery is the main medial vessel, branching into internal and external carotid arteries. The superior thyroid artery branches from the external carotid, while the inferior thyroid artery comes from the thyrocervical trunk of the subclavian artery. Corresponding thyroid veins drain into the internal jugular veins, which are situated superiorly and laterally to the common carotid arteries.
 """
 
-# Detalles de la imagen
+# Image details
 image_details = [
     {"path": "Face and Neck/imagenes/Lateral to the thyoroid.png", "description": "Lateral view of the thyroid"},
     {"path": "Face and Neck/imagenes/drenaje venoso tiroides .png", "description": "Venous drainage of the thyroid"},
@@ -43,12 +33,12 @@ image_details = [
     {"path": "Face and Neck/imagenes/mosto common variant .png", "description": "Most common variant of thyroid anatomy"}
 ]
 
-# Crear la tarjeta de aprendizaje
-with st.expander(f"<h2 style='color: orange;'>{title}</h2>", expanded=False):
-    st.markdown(f"<h4 style='color: orange;'>{question}</h4>", unsafe_allow_html=True)
-    st.markdown(answer, unsafe_allow_html=True)
+# Create the flash card
+with st.expander(f"<h3 style='color: orange;'>{title}</h3>", expanded=False):
+    st.markdown(f"<h4 style='color: orange;'>Question: {question}</h4>", unsafe_allow_html=True)
+    st.markdown(f"<div style='color: white;'>{answer}</div>", unsafe_allow_html=True)
 
-    # Mostrar las imágenes con descripciones si existen
+    # Display the images with descriptions if they exist
     for image_detail in image_details:
         try:
             st.markdown(f"<b style='color: white;'>{image_detail['description']}</b>", unsafe_allow_html=True)
