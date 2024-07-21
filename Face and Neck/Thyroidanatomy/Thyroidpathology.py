@@ -1,10 +1,15 @@
 import streamlit as st
 
-# Define the content of the flash card
-title = "Clinical and Sonographic Findings of Thyroid Conditions"
+# Initialize the variable in session_state
+if 'mostrar_eponimos' not in st.session_state:
+    st.session_state.mostrar_eponimos = False
 
-# Create expandable sections
-with st.expander(title, expanded=False):
+# Function to style the eponym titles
+def style_title(title):
+    return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
+
+# Expandable and collapsible section
+with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expanded=st.session_state.mostrar_eponimos):
     
     # Goiter
     with st.expander("Goiter", expanded=False):
