@@ -1,9 +1,10 @@
 import streamlit as st
 
 # Definir el contenido de la tarjeta de aprendizaje
-title = "<h2 style='color: blue;'>Vascular Anatomy of the Thyroid Gland and Neck</h2>"
-question = "<h4 style='color: darkorange;'>What are the primary vascular structures near the thyroid gland and their branches?</h4>"
+title = "Vascular Anatomy of the Thyroid Gland and Neck"
+question = "What are the primary vascular structures near the thyroid gland and their branches?"
 answer = """
+<p style="color: white;">
 <b><u>Primary Vascular Structures:</u></b>
 <ul>
     <li><b>Common Carotid Artery:</b> The most medial vessel, located lateral to the thyroid gland.</li>
@@ -30,6 +31,7 @@ answer = """
 
 <b><u>Summary:</u></b>
 <p>The common carotid artery is the main medial vessel, branching into internal and external carotid arteries. The superior thyroid artery branches from the external carotid, while the inferior thyroid artery comes from the thyrocervical trunk of the subclavian artery. Corresponding thyroid veins drain into the internal jugular veins, which are situated superiorly and laterally to the common carotid arteries.</p>
+</p>
 """
 
 # Detalles de la imagen
@@ -42,14 +44,14 @@ image_details = [
 ]
 
 # Crear la tarjeta de aprendizaje
-with st.expander(title, expanded=False):
-    st.markdown(question, unsafe_allow_html=True)
+with st.expander(f"<h2 style='color: orange;'>{title}</h2>", expanded=False):
+    st.markdown(f"<h4 style='color: orange;'>{question}</h4>", unsafe_allow_html=True)
     st.markdown(answer, unsafe_allow_html=True)
 
     # Mostrar las imágenes con descripciones si existen
     for image_detail in image_details:
         try:
-            st.markdown(f"<b>{image_detail['description']}</b>", unsafe_allow_html=True)
+            st.markdown(f"<b style='color: white;'>{image_detail['description']}</b>", unsafe_allow_html=True)
             st.image(image_detail["path"], use_column_width=True)
         except Exception as e:
             st.warning(f"Image '{image_detail['path']}' not found. Please check the file path. Error: {e}")
