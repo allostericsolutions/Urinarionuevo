@@ -16,8 +16,9 @@ imagenes = [
     ("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr12.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", "Thyroid nodules with sonographic characteristics of malignancy. B: Solid thyroid nodule higher than wide: anteroposterior diameter (height) greater than longitudinal diameter (width). (papillary Ca).")
 ]
 
-# Despliegue de las imágenes con sus descripciones
-st.markdown("## Imágenes:")
-for i, (url, descripcion) in enumerate(imagenes):
-    st.markdown(f"**Figura {i+1}:** {descripcion}")
-    st.image(url)
+# Pestaña para las imágenes
+with st.expander("Imágenes"):
+    # Despliegue de las imágenes con sus descripciones
+    for i, (url, descripcion) in enumerate(imagenes):
+        st.markdown(f"**Figura {i+1}:** {descripcion}")
+        st.image(url)
