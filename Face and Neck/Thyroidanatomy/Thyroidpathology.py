@@ -29,7 +29,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Diffusely heterogeneous echotexture
     - Multiple nodules with cystic and solid components
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr1.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Goiter: Enlarged thyroid gland with heterogeneous echotexture.") 
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr1.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Goiter: Enlarged thyroid gland with heterogeneous echotexture.")
 
     # Graves Disease
     st.markdown(style_title("Graves Disease:") + " ", unsafe_allow_html=True)
@@ -46,7 +46,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Oligomenorrhea (infrequent menstrual periods)
     - Pretibial myxedema
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr2.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Graves Disease: Enlarged gland with heterogeneous echotexture.") 
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr2.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Graves Disease: Enlarged gland with heterogeneous echotexture.")
 
     st.markdown("#### Sonographic Findings")
     st.markdown("""
@@ -67,7 +67,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Menorrhagia (heavy menstrual bleeding)
     - Pallor (pale skin)
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr3.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Hashimoto Thyroiditis: Mild enlargement of the thyroid gland with heterogeneous echotexture.") 
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr3.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Hashimoto Thyroiditis: Mild enlargement of the thyroid gland with heterogeneous echotexture.")
 
     st.markdown("#### Sonographic Findings")
     st.markdown("""
@@ -87,7 +87,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Nodular hyperplasia: The most common cause of thyroid nodules.
     - Hyperplastic nodules: Often multiple and with varying appearances.
     """)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr4.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Benign Thyroid Nodules: Sonographic features include cystic components, hyperechoic mass, and wider-than-tall shape.") 
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr4.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Benign Thyroid Nodules: Sonographic features include cystic components, hyperechoic mass, and wider-than-tall shape.")
 
     st.markdown("#### Sonographic Features")
     st.markdown("""
@@ -117,8 +117,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Enlargement of the cervical lymph nodes (metastasis)
     - “Cold” nodule (nuclear medicine finding)
     """)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr5.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Malignant Thyroid Nodules: Sonographic features include hypoechoic mass, taller-than-wide shape, and microcalcifications.") 
-
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr5.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Malignant Thyroid Nodules: Sonographic features include hypoechoic mass, taller-than-wide shape, and microcalcifications.")
 
     # General Aspects
     st.markdown(style_title("General Aspects:") + " ", unsafe_allow_html=True)
@@ -198,7 +197,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Can be solid (isoechoic, hypoechoic, or hyperechoic), cystic (anechoic or hypoechoic), or mixed.
         - Ultrasound should describe location, size, number, echogenicity, echotexture, borders, calcifications, and vascularization.
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr6.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Normal thyroid: H-shaped with lobes, isthmus, and pyramidal lobe.") 
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr6.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Normal thyroid: H-shaped with lobes, isthmus, and pyramidal lobe.")
 
     # Sonographic Signs of Malignancy of Thyroid Nodules
     st.markdown(style_title("SONOGRAPHIC SIGNS OF MALIGNANCY OF THYROID NODULES") + " ", unsafe_allow_html=True)
@@ -217,4 +216,4 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Solid-cystic nodules larger than 20 mm
     - **The more malignancy criteria present, the higher the probability of malignancy.**
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S0716864
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_20181023060
