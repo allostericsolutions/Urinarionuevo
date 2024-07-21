@@ -34,14 +34,14 @@ image_details = [
 ]
 
 # Create the flash card
-with st.expander(f"<h3 style='color: orange;'>{title}</h3>", expanded=False):
-    st.markdown(f"<h4 style='color: orange;'>Question: {question}</h4>", unsafe_allow_html=True)
-    st.markdown(f"<div style='color: white;'>{answer}</div>", unsafe_allow_html=True)
+with st.expander(title, expanded=False):
+    st.markdown(f"**Question:** {question}")
+    st.markdown(answer)
 
     # Display the images with descriptions if they exist
     for image_detail in image_details:
         try:
-            st.markdown(f"<b style='color: white;'>{image_detail['description']}</b>", unsafe_allow_html=True)
+            st.markdown(f"**{image_detail['description']}**")
             st.image(image_detail["path"], use_column_width=True)
         except Exception as e:
             st.warning(f"Image '{image_detail['path']}' not found. Please check the file path. Error: {e}")
