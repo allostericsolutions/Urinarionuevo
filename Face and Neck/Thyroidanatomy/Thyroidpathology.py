@@ -29,7 +29,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - Diffusely heterogeneous echotexture
     - Multiple nodules with cystic and solid components
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr1.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Goiter: Enlarged thyroid gland with heterogeneous echotexture.") # Image URL for Goiter
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr1.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Normal thyroid: Thyroid lobe in longitudinal section, homogeneous parenchyma, normal echogenicity, normal shape and size.") # Image URL for Goiter
 
     # Graves Disease
     st.markdown(style_title("Graves Disease:") + " ", unsafe_allow_html=True)
@@ -198,7 +198,7 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
         - Can be solid (isoechoic, hypoechoic, or hyperechoic), cystic (anechoic or hypoechoic), or mixed.
         - Ultrasound should describe location, size, number, echogenicity, echotexture, borders, calcifications, and vascularization.
     """, unsafe_allow_html=True)
-    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr6.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Normal thyroid: H-shaped with lobes, isthmus, and pyramidal lobe.") # Image URL for Normal thyroid
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr1.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Normal thyroid: Thyroid lobe in longitudinal section, homogeneous parenchyma, normal echogenicity, normal shape and size.") # Image URL for Normal thyroid
 
     # Signos Ecográficos de Malignidad de los Nódulos Tiroideos
     st.markdown(style_title("Sonographic Signs of Malignancy in Thyroid Nodules") + " ", unsafe_allow_html=True)
@@ -284,3 +284,5 @@ with st.expander("Clinical and Sonographic Findings of Thyroid Conditions", expa
     - **Minimally invasive treatments are increasingly used.**
     - **Importance of training:** Ensure adequate training for professionals performing ultrasound examinations. 
     """, unsafe_allow_html=True)
+
+    st.image("https://static.elsevier.es/multimedia/07168640/0000002900000004/v4_201810230604/S071686401830083X/v4_201810230604/es/main.assets/gr12.jpeg?xkr=ue/ImdikoIMrsJoerZ+w997EogCnBdOOD93cPFbanNd2Vt2E9KIXSbfPNY5VCUB4kpCjPTZRm5n9r2Wgu2xKnaaLdMEH3EdygauzKlTyPTyhRP+tDkOLS79kLGbGk8d1oJdnmsF+0Z5YKEobFo2Z0StElaHQ/Zxzln4bsZr6SpIGyECJo3zN5e9MhSBTLGEIyh1iHSnNaDvwSThBeYb13Dl4mQuzAF0rIOYrRbqsEElCtLgsStdEbPvnKVXxcLi47ubDcRK6hoXBs8nEcD6h2JNM9FHOQK4L++jZQDRQQi3lrJdc8vWmXUrOzxvZ7LNG", caption="Radiofrequency Ablation of Benign Thyroid Nodule.") # Image URL for Ablación de Nódulos Tiroideos Benignos
