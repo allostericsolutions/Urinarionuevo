@@ -14,4 +14,4 @@ def call_gpt(prompt):
         stop=None,
         temperature=0.7,
     )
-    return response.choices[0].message['content'].strip()
+    return response['choices'][0]['message']['content'].strip()
