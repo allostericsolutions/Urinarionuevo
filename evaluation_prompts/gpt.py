@@ -6,10 +6,10 @@ def call_gpt(prompt):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are a helpful assistant."},  # Mensaje del sistema (opcional)
+            {"role": "system", "content": "You are a helpful assistant."}, 
             {"role": "user", "content": prompt}
         ],
-        max_tokens=100,  # Ajusta según tus necesidades
+        max_tokens=100,  
         n=1,
         stop=None,
         temperature=0.7,
