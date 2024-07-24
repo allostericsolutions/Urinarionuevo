@@ -1,5 +1,8 @@
 import streamlit as st
 
+# Importar la función de evaluación desde el nuevo archivo
+from evaluation_section import evaluation_mode
+
 # Inicializar la variable de la página actual en session_state
 if 'pagina_actual' not in st.session_state:
     st.session_state.pagina_actual = "Content"
@@ -90,7 +93,6 @@ if st.session_state.pagina_actual == "Content":
         st.write("#### The Musculoskeletal Imaging, Breast, and Superficial Structures")
         # Agrega aquí el contenido de "The Musculoskeletal Imaging, Breast, and Superficial Structures"
 
-# Bloque para la sección "Evaluation" fuera del "Content"
-elif st.session_state.pagina_actual == "Evaluation": 
-    st.write("## Evaluation Mode")
-    exec(open('Abdominal Sonography Overview/evaluation.py').read())
+# Bloque para la sección "Evaluation"
+if st.session_state.pagina_actual == "Evaluation":
+    evaluation_mode()
