@@ -1,23 +1,5 @@
 import streamlit as st
-import openai  # Importar la librería OpenAI
-from evaluation_prompts.gpt import call_gpt, prompt
-
-# Define la función evaluation_mode() antes de importarla
-def evaluation_mode():
-    st.write("## Evaluation Mode")
-    exec(open('Abdominal Sonography Overview/evaluation.py').read())
-
-    # Obtener la API key de los secretos de Streamlit Cloud
-    openai.api_key = st.secrets["my_proud"]  # Cambia "my_proud" al nombre de tu variable en el archivo de secretos
-
-    # Usar las funciones de GPT
-    gpt_response = call_gpt(prompt)
-    st.write("### GPT Response")
-    st.write(gpt_response)
-
-
-# Importar la función de evaluación desde el nuevo archivo
-from evaluation_section import evaluation_mode
+import openai
 
 # Inicializar la variable de la página actual en session_state
 if 'pagina_actual' not in st.session_state:
@@ -35,6 +17,37 @@ st.write("### ARDMS for Abdominal Ultrasound")
 # Opciones de página
 pagina = st.radio("Select:", ["Content", "Evaluation"])
 st.session_state.pagina_actual = pagina
+
+# Función para llamar a la API de GPT-3 Turbo
+def call_gpt(prompt):
+    """Llama a la API de OpenAI con el prompt dado y devuelve la respuesta."""
+
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo", 
+        messages=[
+            {"role": "user", "content": prompt}
+        ],
+        max_tokens=100,  # Ajusta según tus necesidades
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+    return response.choices[0].message['content'].strip()
+
+# Define la función evaluation_mode() 
+def evaluation_mode():
+    st.write("## Evaluation Mode")
+    # ... (tu código existente para la sección "Evaluation") ... 
+
+    # Obtener la API key de los secretos de Streamlit Cloud
+    openai.api_key = st.secrets["my_proud"] 
+
+    # Ejemplo de prompt
+    ejemplo_prompt = "¡Hola, GPT! Escribe una frase inspiradora."
+    respuesta = call_gpt(ejemplo_prompt)
+    st.write("**Prompt:**", ejemplo_prompt)
+    st.write("**Respuesta de GPT:**", respuesta)
+
 
 # Mostrar contenido según la página seleccionada
 if st.session_state.pagina_actual == "Content":
