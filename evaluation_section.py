@@ -7,9 +7,11 @@ def evaluation_mode():
     exec(open('Abdominal Sonography Overview/evaluation.py').read())
 
     # Obtener la API key de los secretos de Streamlit Cloud
-    openai.api_key = st.secrets["openai_api_key"]
+    openai.api_key = st.secrets["my_proud"]  # Cambia "my_proud" al nombre de tu variable en el archivo de secretos
 
     # Usar las funciones de GPT
     gpt_response = call_gpt(prompt)
     st.write("### GPT Response")
     st.write(gpt_response)
+
+# Resto de tu código (import streamlit, opciones de página, etc.)
