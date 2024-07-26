@@ -22,10 +22,6 @@ pagina = st.radio("Select:", ["Content", "Evaluation"])
 st.session_state.pagina_actual = pagina
 
 
-# Función para llamar a la API de GPT-3 Turbo (CORREGIDA)
-from evaluation_prompts.gpt import call_gpt
-
-
 def evaluation_mode():
     st.write("## Evaluation Mode")
     # ... (tu código existente para la sección "Evaluation") ...
