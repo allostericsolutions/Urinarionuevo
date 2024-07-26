@@ -2,9 +2,9 @@ import streamlit as st
 import webbrowser
 
 # Verificar los parámetros de consulta y actualizar la página actual
-query_params = st.experimental_get_query_params()
+query_params = st.query_params
 if "pagina" in query_params:
-    st.session_state.pagina_actual = query_params["pagina"][0]
+    st.session_state.pagina_actual = query_params["pagina"]
 else:
     st.session_state.pagina_actual = "Content"
 
@@ -24,7 +24,7 @@ st.write("### ARDMS for Abdominal Ultrasound")
 pagina = st.radio("Select:", ["Content", "Evaluation"])
 if pagina != st.session_state.pagina_actual:
     st.session_state.pagina_actual = pagina
-    st.experimental_set_query_params(pagina=pagina)
+    st.experimental_set_query_params(pagina=pagina)  # Cambia en línea con la actualización.
 
 def evaluation_mode():
     st.write("## Evaluation Mode")
