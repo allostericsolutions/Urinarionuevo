@@ -1,5 +1,4 @@
 import streamlit as st
-import webbrowser
 
 # Verificar los parámetros de consulta y actualizar la página actual
 query_params = st.experimental_get_query_params()
@@ -24,12 +23,11 @@ st.write("### ARDMS for Abdominal Ultrasound")
 pagina = st.radio("Select:", ["Content", "Evaluation"])
 if pagina != st.session_state.pagina_actual:
     st.session_state.pagina_actual = pagina
-    st.experimental_set_query_params(pagina=pagina)  # Cambia en línea con la actualización.
+    st.experimental_set_query_params(pagina=pagina)
 
 def evaluation_mode():
     st.write("## Evaluation Mode")
-    # Redirigir a la URL especificada
-    webbrowser.open("https://chatbot-prueba-5yilucptxsrkggrlgfn5yt.streamlit.app/", new=0)
+    st.markdown("[Acceder a Evaluation Mode](https://chatbot-prueba-5yilucptxsrkggrlgfn5yt.streamlit.app/)", unsafe_allow_html=True)
 
 # Mostrar contenido según la página seleccionada
 if st.session_state.pagina_actual == "Content":
