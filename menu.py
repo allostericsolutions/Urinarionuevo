@@ -1,5 +1,5 @@
 import streamlit as st
-import openai
+import webbrowser
 
 # Verificar los parámetros de consulta y actualizar la página actual
 query_params = st.experimental_get_query_params()
@@ -28,16 +28,8 @@ if pagina != st.session_state.pagina_actual:
 
 def evaluation_mode():
     st.write("## Evaluation Mode")
-    # ... (tu código existente para la sección "Evaluation") ...
-
-    # Obtener la API key de los secretos de Streamlit
-    openai.api_key = st.secrets["my_proud"]
-
-    # Ejemplo de prompt
-    ejemplo_prompt = "¡Hola, GPT! Escribe una frase inspiradora."
-    respuesta = call_gpt(ejemplo_prompt)
-    st.write("**Prompt:**", ejemplo_prompt)
-    st.write("**Respuesta de GPT:**", respuesta)
+    # Redirigir a la URL especificada
+    webbrowser.open("https://chatbot-prueba-5yilucptxsrkggrlgfn5yt.streamlit.app/", new=0)
 
 # Mostrar contenido según la página seleccionada
 if st.session_state.pagina_actual == "Content":
