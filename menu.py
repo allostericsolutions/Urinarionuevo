@@ -2,9 +2,9 @@ import streamlit as st
 import webbrowser
 
 # Verificar los parámetros de consulta y actualizar la página actual
-query_params = st.query_params
+query_params = st.experimental_get_query_params()
 if "pagina" in query_params:
-    st.session_state.pagina_actual = query_params["pagina"]
+    st.session_state.pagina_actual = query_params["pagina"][0]
 else:
     st.session_state.pagina_actual = "Content"
 
