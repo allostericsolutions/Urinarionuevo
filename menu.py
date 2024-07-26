@@ -1,8 +1,11 @@
 import streamlit as st
 import openai
 
-# Inicializar la variable de la página actual en session_state
-if "pagina_actual" not in st.session_state:
+# Verificar los parámetros de consulta y actualizar la página actual
+query_params = st.experimental_get_query_params()
+if "pagina" in query_params:
+    st.session_state.pagina_actual = query_params["pagina"][0]
+else:
     st.session_state.pagina_actual = "Content"
 
 st.title("Abdomen ARDMS")
@@ -19,8 +22,9 @@ st.write("### ARDMS for Abdominal Ultrasound")
 
 # Opciones de página
 pagina = st.radio("Select:", ["Content", "Evaluation"])
-st.session_state.pagina_actual = pagina
-
+if pagina != st.session_state.pagina_actual:
+    st.session_state.pagina_actual = pagina
+    st.experimental_set_query_params(pagina=pagina)
 
 def evaluation_mode():
     st.write("## Evaluation Mode")
@@ -34,7 +38,6 @@ def evaluation_mode():
     respuesta = call_gpt(ejemplo_prompt)
     st.write("**Prompt:**", ejemplo_prompt)
     st.write("**Respuesta de GPT:**", respuesta)
-
 
 # Mostrar contenido según la página seleccionada
 if st.session_state.pagina_actual == "Content":
