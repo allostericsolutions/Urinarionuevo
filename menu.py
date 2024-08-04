@@ -8,7 +8,11 @@ else:
     st.session_state.pagina_actual = "Content"
 
 st.title("Abdomen ARDMS")
-
+# Streamlit Page Configuration
+st.set_page_config(
+    page_title="Ultrasound Quiz",
+    page_icon="https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png",  
+    
 # Mostrar logo, contacto y sitio web antes de las pestañas
 st.image(
     "https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png",
