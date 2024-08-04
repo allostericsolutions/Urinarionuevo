@@ -20,7 +20,7 @@ st.write("Sitio web:", "www.allostericsolutions.com")
 st.write("### ARDMS for Abdominal Ultrasound")
 
 # Opciones de página
-pagina = st.radio("Select:", ["Content", "Evaluation"])
+pagina = st.sidebar.radio("Select:", ["Content", "Evaluation"])
 if pagina != st.session_state.pagina_actual:
     st.session_state.pagina_actual = pagina
     st.experimental_set_query_params(pagina=pagina)
@@ -32,7 +32,7 @@ def evaluation_mode():
 # Mostrar contenido según la página seleccionada
 if st.session_state.pagina_actual == "Content":
     # Opciones de subtema
-    subtema = st.radio(
+    subtema = st.sidebar.radio(
         "Select a Subtopic:",
         [
             "Abdominal Sonography Overview",
