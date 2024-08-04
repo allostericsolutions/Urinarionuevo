@@ -102,9 +102,7 @@ if st.session_state.pagina_actual == "Content":
         st.write("#### The Male Pelvis")
         # Agrega aquí el contenido de "The Male Pelvis"
     elif subtema == "The Musculoskeletal Imaging, Breast, and Superficial Structures":
-        st.write(
-            "#### The Musculoskeletal Imaging, Breast, and Superficial Structures"
-        )
+        st.write("#### The Musculoskeletal Imaging, Breast, and Superficial Structures")
         # Agrega aquí el contenido de "The Musculoskeletal Imaging, Breast, and Superficial Structures"
 
 # Bloque para la sección "Evaluation"
