@@ -27,7 +27,7 @@ if pagina != st.session_state.pagina_actual:
 
 def evaluation_mode():
     st.write("## Evaluation Mode")
-    st.markdown("[Acceder a Evaluation Mode](https://chatbot-prueba-5yilucptxsrkggrlgfn5yt.streamlit.app/)", unsafe_allow_html=True)
+    st.markdown("[Acceder a Evaluation Mode](https://evaluationardmpractice.streamlit.app/)", unsafe_allow_html=True)
 
 # Mostrar contenido según la página seleccionada
 if st.session_state.pagina_actual == "Content":
