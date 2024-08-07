@@ -20,7 +20,7 @@ st.write("Sitio web:", "www.allostericsolutions.com")
 st.write("### ARDMS for Abdominal Ultrasound")
 
 # Opciones de página
-pagina = st.sidebar.radio("Select:", ["Content", "Evaluation", "Waves Assistant"])
+pagina = st.sidebar.radio("Select:", ["Content", "Evaluation"])
 if pagina != st.session_state.pagina_actual:
     st.session_state.pagina_actual = pagina
     st.experimental_set_query_params(pagina=pagina)
