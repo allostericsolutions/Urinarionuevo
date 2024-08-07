@@ -25,19 +25,44 @@ artifacts = [
     ("Speed Displacement", "This artifact results from the substantial variability of sound speed in fat (1450 m/s) compared to soft tissues (1540 m/s), which is about a 6% slower propagation speed. This leads to the distal displacement of anatomic borders when ultrasound interacts with fat-containing structures, affecting the accuracy of distance measurements.", ["Abdominal Sonography Overview/imagenes/speed displacement.jpg", "Abdominal Sonography Overview/imagenes/speed displacement.png"]),
     ("Attenuation Artifacts", "Caused by the loss of energy as sound waves pass through tissue, resulting in hypoechoic or anechoic areas on the image, complicating the visualization of structures.", None),
     ("Enhancement Artifacts", "These occur when structures with low acoustic impedance artificially increase brightness below them, making it challenging to visualize underlying structures, such as blood vessels or the bladder.", None),
-    ("Speckle Artifacts", "Results from the interference of sound waves with each other, producing a granular or speckled appearance on the images, which may hinder differentiation between smaller structures, like blood vessels.", None),
-    ("Absent Doppler Signal", "This artifact may occur due to low gain, low frequency, high wall filter settings, or an excessively high velocity scale, making it difficult to detect blood flow accurately. Adjustments: Decrease the pulse repetition frequency (PRF), Increase spectral gain, Decrease the wall filter, Open the sample gate.", None),
-    ("Aliasing", "Aliasing occurs when the Doppler sampling rate (pulse-repetition frequency) is insufficient to accurately display the Doppler frequency shift. Adjustments: Increase the PRF, Adjust the baseline, Switch to a lower transmitted frequency, Increase the angle of insonation to decrease the Doppler shift.", "Abdominal Sonography Overview/imagenes/aliasing .png")
+    ("Speckle Artifacts", "Results from the interference of sound waves with each other, producing a granular or speckled appearance on the images, which may hinder differentiation between smaller structures, like blood vessels.", None)
+]
+
+dopp_artifacts = [
+    ("Absent Doppler Signal", "This artifact may occur due to low gain, low frequency, high wall filter settings, or an excessively high velocity scale, making it difficult to detect blood flow accurately.", None,
+     [
+         "Decrease the pulse repetition frequency (PRF)",
+         "Increase spectral gain",
+         "Decrease the wall filter",
+         "Open the sample gate"
+     ]),
+    ("Aliasing", "Aliasing occurs when the Doppler sampling rate (pulse-repetition frequency) is insufficient to accurately display the Doppler frequency shift.", "Abdominal Sonography Overview/imagenes/aliasing .png",
+     [
+         "Increase the pulse repetition frequency (PRF)",
+         "Adjust the baseline",
+         "Switch to a lower transmitted frequency",
+         "Increase the angle of insonation to decrease the Doppler shift"
+     ])
 ]
 
 # Display the sections
 st.title("Ultrasound Artifacts")
 
-for artifact in artifacts:
-    st.markdown(style_title(artifact[0]) + f": {artifact[1]}", unsafe_allow_html=True)
-    if artifact[2]:
-        if isinstance(artifact[2], list):
-            for img in artifact[2]:
-                st.image(img)
-        else:
+with st.expander("General Artifacts"):
+    for artifact in artifacts:
+        st.markdown(style_title(artifact[0]) + f": {artifact[1]}", unsafe_allow_html=True)
+        if artifact[2]:
+            if isinstance(artifact[2], list):
+                for img in artifact[2]:
+                    st.image(img)
+            else:
+                st.image(artifact[2])
+
+with st.expander("Doppler Artifacts"):
+    for artifact in dopp_artifacts:
+        st.markdown(style_title(artifact[0]) + f": {artifact[1]}", unsafe_allow_html=True)
+        if artifact[2]:
             st.image(artifact[2])
+        st.markdown(style_title("Adjustments") + ":", unsafe_allow_html=True)
+        for adjustment in artifact[3]:
+            st.markdown(f"- {adjustment}")
