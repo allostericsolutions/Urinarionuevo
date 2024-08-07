@@ -18,7 +18,7 @@ openai.api_key = OPENAI_API_KEY
 # Leer el contenido del prompt de configuración
 def get_prompt():
     try:
-        prompt_path = "gpt_config/prompt.txt"  # Ruta corregida
+        prompt_path = "gpt_config/prompt.text"  # Ruta corregida
         if not os.path.exists(prompt_path):
             st.error(f"File not found: {prompt_path}")
             st.stop()
