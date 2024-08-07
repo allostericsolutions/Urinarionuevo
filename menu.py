@@ -110,6 +110,3 @@ if st.session_state.pagina_actual == "Content":
 if st.session_state.pagina_actual == "Evaluation":
     evaluation_mode()
 
-# Bloque para Waves Assistant
-elif st.session_state.pagina_actual == "Waves Assistant":
-    exec(open("gpt_config/Chat.py").read())
