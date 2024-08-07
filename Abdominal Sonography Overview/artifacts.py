@@ -21,8 +21,10 @@ artifacts = [
      "Comet tail artifact observed as a tapering, bright line extending from the anterior wall of the gallbladder."
     ),
     ("Dirty Shadowing", 
-     "Caused by the presence of air or gas within the bowel, this artifact affects image quality and can obscure important details. It is frequently noted when the ultrasound beam encounters gas-filled structures.", 
-     None),
+     "This artifact arises due to the presence of gas within the bowel, obstructing the ultrasound signal and creating shadowing effects. It can obscure important anatomical details.", 
+     "Abdominal Sonography Overview/imagenes/dirty_shadowing.png",
+     "The image displays both a ring-down artifact and 'dirty shadowing' caused by gas in the duodenum. The central region exhibits a ring-down appearance characterized by an echogenic step-ladder. Surrounding the ring-down is the dirty shadowing effect, which complicates visualization."
+    ),
     ("Edge Shadowing", 
      "This reflective effect occurs when sound waves encounter a sudden change in tissue density, such as at the boundary between two organs. It may produce a bright line that can obscure underlying structures.", 
      "Abdominal Sonography Overview/imagenes/Refraction, edge shadowing.png"),
@@ -91,7 +93,7 @@ with st.expander("General Artifacts"):
         if artifact[2]:
             if isinstance(artifact[2], list):
                 for img in artifact[2]:
-                    st.image(img)
+                    st.image(img, caption=artifact[3] if len(artifact) > 3 else None)
             else:
                 st.image(artifact[2], caption=artifact[3] if len(artifact) > 3 else None)
 
