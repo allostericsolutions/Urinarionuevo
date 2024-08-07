@@ -58,6 +58,7 @@ if st.session_state.pagina_actual == "Content":
         # Ejecuta el módulo de "Abdominal Sonography Overview"
         exec(open("Abdominal Sonography Overview/abdominaloverview.py").read())
         exec(open("Abdominal Sonography Overview/signs.py").read())
+        exec(open("Abdominal Sonography Overview/artifacts.py").read()) 
     elif subtema == "The Liver":
         st.write("#### The Liver")
         exec(open("The liver/Eponyms.py").read())
