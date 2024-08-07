@@ -13,7 +13,7 @@ initialize_openai()
 # Leer el contenido del prompt de configuración
 def get_prompt():
     try:
-        prompt_path = "gpt_config/prompt.text"  # Asegúrate de que es 'prompt.text'
+        prompt_path = "gpt_config/prompt.text"  # Asegúrate de que sea 'prompt.text'
         if not os.path.exists(prompt_path):
             st.error(f"File not found: {prompt_path}")
             st.stop()
@@ -33,7 +33,7 @@ if st.button("Send"):
     if user_input:
         prompt = get_prompt() + "\n" + user_input
         try:
-            response = openai.ChatCompletion.create(
+            response = openai.Completion.create(
                 model="gpt-4",
                 messages=[
                     {"role": "system", "content": prompt},
