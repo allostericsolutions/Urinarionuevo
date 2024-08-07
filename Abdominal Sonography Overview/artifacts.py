@@ -22,7 +22,7 @@ artifacts = [
     ),
     ("Dirty Shadowing", 
      "This artifact arises due to the presence of gas within the bowel, obstructing the ultrasound signal and creating shadowing effects. It can obscure important anatomical details.", 
-     "Abdominal Sonography Overview/imagenes/dirty_shadowing.png",
+     "Abdominal Sonography Overview/imagenes/dirty shadow.png",
      "The image displays both a ring-down artifact and 'dirty shadowing' caused by gas in the duodenum. The central region exhibits a ring-down appearance characterized by an echogenic step-ladder. Surrounding the ring-down is the dirty shadowing effect, which complicates visualization."
     ),
     ("Edge Shadowing", 
