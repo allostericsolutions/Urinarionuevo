@@ -1,6 +1,7 @@
-import openai
 import streamlit as st
+import openai
 import logging
+import os  # Asegúrate de haber importado este módulo
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -13,7 +14,6 @@ if not OPENAI_API_KEY:
 
 # Assign OpenAI API Key
 openai.api_key = OPENAI_API_KEY
-client = openai.OpenAI()
 
 # Leer el contenido del prompt de configuración
 def get_prompt():
