@@ -10,7 +10,7 @@ def style_title(title):
 
 # Ultrasound Artifacts
 artifacts = [
-    ("Anisotropy", "This phenomenon occurs when the sound beam strikes a structure at a non-perpendicular angle, leading to a loss of the structure's true echogenicity. It can result in an inaccurate representation of tendon imaging.", None),
+    ("Anisotropy", "This phenomenon occurs when the sound beam strikes a structure at a non-perpendicular angle, leading to a loss of the structure's true echogenicity. It can result in an inaccurate representation of tendon imaging.", "Abdominal Sonography Overview/imagenes/anisotrophy.png", "Anisotropy. Left image is obtained perpendicular to the tendon (arrows), whereas the right image has been obtained in an obliqued orientation to the tendon."),
     ("Comet-tail Artifact", "This artifact is the result of multiple small, highly reflective interfaces creating a characteristic pattern. It is commonly seen in cases of adenomyomatosis of the gallbladder.", "Abdominal Sonography Overview/imagenes/comet tail.png"),
     ("Dirty Shadowing", "Caused by the presence of air or gas within the bowel, this artifact affects image quality and can obscure important details. It is frequently noted when the ultrasound beam encounters gas-filled structures.", None),
     ("Edge Shadowing", "This reflective effect occurs when sound waves encounter a sudden change in tissue density, such as at the boundary between two organs. It may produce a bright line that can obscure underlying structures.", "Abdominal Sonography Overview/imagenes/Refraction, edge shadowing.png"),
@@ -56,7 +56,7 @@ with st.expander("General Artifacts"):
                 for img in artifact[2]:
                     st.image(img)
             else:
-                st.image(artifact[2])
+                st.image(artifact[2], caption=artifact[3] if len(artifact) > 3 else None)
 
 with st.expander("Doppler Artifacts"):
     for artifact in dopp_artifacts:
