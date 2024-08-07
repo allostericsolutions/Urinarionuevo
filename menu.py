@@ -20,7 +20,7 @@ st.write("Sitio web:", "www.allostericsolutions.com")
 st.write("### ARDMS for Abdominal Ultrasound")
 
 # Opciones de página
-pagina = st.sidebar.radio("Select:", ["Content", "Evaluation"])
+pagina = st.sidebar.radio("Select:", ["Content", "Evaluation", "Waves Assistant"])
 if pagina != st.session_state.pagina_actual:
     st.session_state.pagina_actual = pagina
     st.experimental_set_query_params(pagina=pagina)
@@ -109,3 +109,7 @@ if st.session_state.pagina_actual == "Content":
 # Bloque para la sección "Evaluation"
 if st.session_state.pagina_actual == "Evaluation":
     evaluation_mode()
+
+# Bloque para Waves Assistant
+elif st.session_state.pagina_actual == "Waves Assistant":
+    exec(open("gpt_config/Chat.py").read())
