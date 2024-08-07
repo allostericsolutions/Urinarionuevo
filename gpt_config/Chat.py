@@ -16,7 +16,7 @@ openai.api_key = OPENAI_API_KEY
 
 # Leer el contenido del prompt de configuración
 def get_prompt():
-    with open("gpt_config/prompt.txt", "r") as file:
+    with open("prompt.txt", "r") as file:
         prompt = file.read()
     return prompt
 
