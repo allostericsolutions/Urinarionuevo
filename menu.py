@@ -1,110 +1,83 @@
 import streamlit as st
 
-# Verificar los parámetros de consulta y actualizar la página actual
-query_params = st.experimental_get_query_params()
-if "pagina" in query_params:
-    st.session_state.pagina_actual = query_params["pagina"][0]
-else:
-    st.session_state.pagina_actual = "Content"
+# Initialize the variable in session_state
+if 'mostrar_eponimos' not in st.session_state:
+    st.session_state.mostrar_eponimos = False
 
-st.title("Abdomen ARDMS")
+# Function to style the sign titles
+def style_title(title):
+    return f"<span style='color:darkorange; font-weight:bold;'>{title}</span>"
 
-# Mostrar logo, contacto y sitio web antes de las pestañas
-st.image(
-    "https://storage.googleapis.com/allostericsolutionsr/Allosteric_Solutions.png",
-    width=400,
-)
-st.write("Contacto:", "franciscocuriel@allostericsolutions.com")
-st.write("Sitio web:", "www.allostericsolutions.com")
+# Ultrasound Signs by Region
+# Gallbladder
+gallbladder_signs = [
+    ("Ball-on-the-wall sign", "Appearance of a gallbladder polyp."),
+    ("Cinnamon bun sign", " Short axis appearance of intussusception "),
+    ("Whirlpool sign", "Cystic duct appearance with color Doppler associated with gallbladder torsion."),
+    ("Wall-echo-shadow (WES) sign", "Appearance of a gallbladder completely filled with stones."),
+    ("Olive sign", "Palpable hypertrophic pyloric muscle associated with pyloric stenosis"),
+    ("Murphy sign", "Pain with probe pressure over the gallbladder."),
+    ("Pseudogallbladder sign", "Cystic structure noted in the gallbladder fossa without evidence of an actual gallbladder; associated with biliary atresia in children.")
+]
 
-st.write("### ARDMS for Abdominal Ultrasound")
+# Liver
+liver_signs = [
+    ("Central dot sign", "Echogenic dot in dilated intrahepatic ducts associated with Caroli disease."),
+    ("Mickey sign", "Cross section appearance of the porta hepatis."),
+    ("Starry sky sign", "Bright portal triads seen with hepatitis."),
+    ("Water lily sign", "Pericyst surrounding a free floating endocyst; associated with a hydatid liver cyst."),
+    ("Turtleback sign", "Calcified septa and fibrosis associated with schistosomiasis."),
+    ("Triangle cord sign", "Avascular, triangular, or tubular structure representing fibrous replacement of duct associated with biliary atresia.")
+]
 
-# Opciones de página
-pagina = st.sidebar.radio("Select:", ["Content", "Evaluation"])
-if pagina != st.session_state.pagina_actual:
-    st.session_state.pagina_actual = pagina
-    st.experimental_set_query_params(pagina=pagina)
+# Lungs
+lungs_signs = [
+    ("Barcode sign", "Abnormal M-mode appearance of lung sliding indicating pneumothorax."),
+    ("Seashore sign", "Normal M-mode tracing of lung sliding.")
+]
 
-def evaluation_mode():
-    st.write("## Evaluation Mode")
-    st.markdown("[Acceder a Evaluation Mode](https://evaluationardmpractice.streamlit.app/)", unsafe_allow_html=True)
+# Bowel
+bowel_signs = [
+    ("Double-duct sign", "Dilatation of both the pancreatic duct and common bile duct."),
+    ("Doughnut sign (target sign)", "Dilatation of both the pancreatic and common bile duct."),
+    ("Keyboard sign", "Seen in small bowel obstruction."),
+    ("McBurney sign", "Pain over McBurney point in the right lower quadrant."),
+    ("Rovsing sign", "Right lower quadrant pain when the left lower quadrant is palpated."),
+    ("Short-axis sign", "Short axis appearance of intussusception."),
+    ("Pseudokidney sign", "Longitudinal appearance of intussusception (may be used for some bowel masses also).")
+]
 
-# Mostrar contenido según la página seleccionada
-if st.session_state.pagina_actual == "Content":
-    # Opciones de subtema
-    subtema = st.sidebar.radio(
-        "Select a Subtopic:",
-        [
-            "Abdominal Sonography Overview",
-            "The Liver",
-            "The Gallbladder",
-            "The Bile Ducts",
-            "The Pancreas",
-            "The Spleen",
-            "The Urinary Tract",
-            "The Adrenal Glands",
-            "Abdominal Vasculature",
-            "Gastrointestinal Tract and Abdominal Wall",
-            "Noncardiac Chest and Retroperitoneum",
-            "The Face and Neck",
-            "The Male Pelvis",
-            "The Musculoskeletal Imaging, Breast, and Superficial Structures",
-        ],
-    )
+# Scrotum
+scrotum_signs = [
+    ("Central dot sign", "Torsed appendage of the testicle that can be seen superficially.")
+]
 
-    # Mostrar el contenido del subtema
-    if subtema == "Abdominal Sonography Overview":
-        st.write("#### Abdominal Sonography Overview")
-        # Ejecuta el módulo de "Abdominal Sonography Overview"
-        exec(open("Abdominal Sonography Overview/abdominaloverview.py").read())
-        exec(open("Abdominal Sonography Overview/signs.py").read())
-    elif subtema == "The Liver":
-        st.write("#### The Liver")
-        exec(open("The liver/Eponyms.py").read())
-        exec(open("The liver/Tumors.py").read())
-    elif subtema == "The Gallbladder":
-        st.write("#### The Gallbladder")
-        exec(open("The Gallbladder/signs.py").read())
-    elif subtema == "The Bile Ducts":
-        st.write("#### The Bile Ducts")
-        exec(open("Biles Ducts/eponyms.py").read())
-    elif subtema == "The Pancreas":
-        st.write("#### The Pancreas")
-        exec(open("pancreas/eponyms.py").read())
-        exec(open("pancreas/signs.py").read())
-    elif subtema == "The Spleen":
-        st.write("#### The Spleen")
-        # Agrega aquí el contenido de "The Spleen"
-    elif subtema == "The Urinary Tract":
-        st.write("#### The Urinary Tract")
-        exec(open("urinary_tract/urinary_tract.py").read())
-        exec(open("urinary_tract/anatomy_physiology.py").read())
-    elif subtema == "The Adrenal Glands":
-        st.write("#### The Adrenal Glands")
-        # Agrega aquí el contenido de "The Adrenal Glands"
-    elif subtema == "Abdominal Vasculature":
-        st.write("#### Abdominal Vasculature")
-        exec(open("Abdominalvasculature/eponyms.py").read())
-    elif subtema == "Gastrointestinal Tract and Abdominal Wall":
-        st.write("#### Gastrointestinal Tract and Abdominal Wall")
-        # Agrega aquí el contenido de "Gastrointestinal Tract and Abdominal Wall"
-    elif subtema == "Noncardiac Chest and Retroperitoneum":
-        st.write("#### Noncardiac Chest and Retroperitoneum")
-        # Agrega aquí el contenido de "Noncardiac Chest and Retroperitoneum"
-    elif subtema == "The Face and Neck":
-        st.write("#### The Face and Neck")
-        exec(open("Face and Neck/eponyms.py").read())
-        exec(open("Face and Neck/Thyroid.py").read())
-        exec(open("Face and Neck/Thyroidanatomy/Thyroidanatomy.py").read())
-        exec(open("Face and Neck/Thyroidanatomy/Thyroidpathology.py").read())
-        exec(open("Face and Neck/Thyroidanatomy/imagenes.py").read())
-    elif subtema == "The Male Pelvis":
-        st.write("#### The Male Pelvis")
-        # Agrega aquí el contenido de "The Male Pelvis"
-    elif subtema == "The Musculoskeletal Imaging, Breast, and Superficial Structures":
-        st.write("#### The Musculoskeletal Imaging, Breast, and Superficial Structures")
-        # Agrega aquí el contenido de "The Musculoskeletal Imaging, Breast, and Superficial Structures"
+# Pancreas
+pancreas_signs = [] # There are no eponymous signs for the pancreas in this list
 
-# Bloque para la sección "Evaluation"
-if st.session_state.pagina_actual == "Evaluation":
-    evaluation_mode()
+# Display the sections
+st.title("Ultrasound Signs")
+
+with st.expander("Gallbladder Ultrasound Signs"):
+    for item in gallbladder_signs:
+        st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
+
+with st.expander("Liver Ultrasound Signs"):
+    for item in liver_signs:
+        st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
+
+with st.expander("Lungs Ultrasound Signs"):
+    for item in lungs_signs:
+        st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
+
+with st.expander("Bowel Ultrasound Signs"):
+    for item in bowel_signs:
+        st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
+
+with st.expander("Scrotum Ultrasound Signs"):
+    for item in scrotum_signs:
+        st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
+
+with st.expander("Pancreas Ultrasound Signs"):
+    for item in pancreas_signs:
+        st.markdown(style_title(item[0]) + f": {item[1]}", unsafe_allow_html=True)
